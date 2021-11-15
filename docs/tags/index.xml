@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Learn Playwright</title>
+    <link>https://nitya.github.io/learn-playwright/tags/</link>
+    <description>Recent content in Tags on Learn Playwright</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Oct 2021 16:16:41 -0400</lastBuildDate><atom:link href="https://nitya.github.io/learn-playwright/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>30Days</title>
+      <link>https://nitya.github.io/learn-playwright/tags/30days/</link>
+      <pubDate>Thu, 14 Oct 2021 16:16:41 -0400</pubDate>
+      
+      <guid>https://nitya.github.io/learn-playwright/tags/30days/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>general</title>
+      <link>https://nitya.github.io/learn-playwright/tags/general/</link>
+      <pubDate>Thu, 14 Oct 2021 16:16:41 -0400</pubDate>
+      
+      <guid>https://nitya.github.io/learn-playwright/tags/general/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

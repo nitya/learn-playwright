@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Learn Playwright</title>
+    <link>https://nitya.github.io/learn-playwright/post/</link>
+    <description>Recent content in Posts on Learn Playwright</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Oct 2021 16:16:41 -0400</lastBuildDate><atom:link href="https://nitya.github.io/learn-playwright/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello, Playwright</title>
+      <link>https://nitya.github.io/learn-playwright/001-hello/</link>
+      <pubDate>Thu, 14 Oct 2021 16:16:41 -0400</pubDate>
+      
+      <guid>https://nitya.github.io/learn-playwright/001-hello/</guid>
+      <description>A #30Days Journey This starts my #30Days exploration of web automation and end-to-end testing for modern web apps, using the Playwright library and API. What I hope to learn over the next month or so:
+ Core concepts and terminology for web automation Playwright features and API Code tutorials from quickstart to advanced usage Best practices, real-world examples (community-driven) Relevant resources for self-study (join me!)  Good tasks to target for Day 001</description>
+    </item>
+    
+  </channel>
+</rss>

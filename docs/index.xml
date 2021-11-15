@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Let&#39;s Learn: Playwright on Learn Playwright</title>
+    <link>https://nitya.github.io/learn-playwright/</link>
+    <description>Recent content in Let&#39;s Learn: Playwright on Learn Playwright</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 13 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nitya.github.io/learn-playwright/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello, Playwright</title>
+      <link>https://nitya.github.io/learn-playwright/001-hello/</link>
+      <pubDate>Thu, 14 Oct 2021 16:16:41 -0400</pubDate>
+      
+      <guid>https://nitya.github.io/learn-playwright/001-hello/</guid>
+      <description>A #30Days Journey This starts my #30Days exploration of web automation and end-to-end testing for modern web apps, using the Playwright library and API. What I hope to learn over the next month or so:
+ Core concepts and terminology for web automation Playwright features and API Code tutorials from quickstart to advanced usage Best practices, real-world examples (community-driven) Relevant resources for self-study (join me!)  Good tasks to target for Day 001</description>
+    </item>
+    
+    <item>
+      <title>Learn Playwright</title>
+      <link>https://nitya.github.io/learn-playwright/about/</link>
+      <pubDate>Wed, 06 Oct 2021 16:24:44 -0400</pubDate>
+      
+      <guid>https://nitya.github.io/learn-playwright/about/</guid>
+      <description>Welcome to my learning journey into end-to-end testing for modern web apps using Playwright. Want to join me - here&amp;rsquo;s what you need to know:
+What is Playwright? Playwright is an Node.js library that enables cross-browser web test automation across Chromium, Firefox and WebKit, with a single API.
+ The project is open source. It supports headless mode across all browsers. It runs on Linux, MacOS and Windows platforms. The API is available in JavaScript, TypeScript, Python, Java and .</description>
+    </item>
+    
+  </channel>
+</rss>
