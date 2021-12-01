@@ -18,9 +18,11 @@ So join me as I begin my [#30DaysOfPlaywright](../about/#my-30daysofplaywright-q
 
 ## What is Playwright?
 
-[Playwright](https://playwright.dev) an [open source](https://github.com/microsoft/playwright) Node.js library that enables **cross-browser testing** and **test automation** across [Chromium](https://www.chromium.org/Home), [Firefox](https://www.mozilla.org/en-US/firefox/new/) and [WebKit](https://webkit.org/), *with a single API*. Want to get a crash-course introduction to Playwright? Check out this hour-long talk from the Playwright team on what Playwright is, and the reasoning behind the decisions made in creating it.
+[Playwright](https://playwright.dev) an [open source](https://github.com/microsoft/playwright) framework for Web Testing and Automation that enables **cross-browser testing** and **web automation** across [Chromium](https://www.chromium.org/Home), [Firefox](https://www.mozilla.org/en-US/firefox/new/) and [WebKit](https://webkit.org/), *with a single API*. 
 
-{{< youtube _Jla6DyuEu4 >}}
+Want to get a rapid introduction to Playwright and fundamental concepts? Watch this excellent 45-minute "Introduction to Playwright test runner" from [Andrew Lushnikov](https://twitter.com/alushnikov) of the Playwright team - and look out for a future blog post that dives into some of these fundamental concepts in more detail.
+
+{{< youtube JjhY2aFBTTk >}}
 
 
 ## Why Cross-Browser Testing?
@@ -51,7 +53,7 @@ From a modern web app development perspective, useful features include:
  * Browser binaries available for [Linux, MacOS and Windows](https://playwright.dev/docs/library#system-requirements).
  * Device [emulation](https://playwright.dev/docs/emulation) support to validate mobile user experiences.
 
-Over the next 30 days, we'll unpack the Playwright API, tools and examples to see how we can put these features to use in a real-world testing environment.
+Over the next 30 days, we'll unpack the [Playwright API](https://playwright.dev/docs/api/class-playwright), exploring relevant tools and examples that put these features to use in a real-world testing context.
 
 
 ## Relevant Resources
@@ -67,18 +69,20 @@ Three resources worth bookmarking at the start of this journey:
 ## Day 0: Review
   
   * [X] Visit and bookmark [Relevant Resources](#relevant-resources)
-  * [X] Watch the [1-hour Video Introduction to Playwright](https://www.youtube.com/watch?v=_Jla6DyuEu4)
-  * [X] Try Playwright [in the browser](https://try.playwright.tech/?e=todo-mvc)
   * [X] Star or Watch [Playwright Repo](https://github.com/microsoft/playwright)
+  * [X] Watch [Introducing Playwright Test runner](https://www.youtube.com/watch?v=JjhY2aFBTTk)
   * [X] Watch [What's New In Playwright: v1.17](https://www.youtube.com/watch?v=7iyIdeoAP04)
 
 
-## Day 1: Planning
+## Day 1: Up Next
 
-The best way to learn something is to take it for a spin with code. There are two paths we can explore as our next steps - take a quick look at each.
+The best way to learn something is to take it for a spin with code. In the next blog post we'll dive into how you can [Get Started With Playwright](https://playwright.dev/docs/intro). At the end of that exercise, you should have:
 
- * [Try Playwright In The Browser](https://try.playwright.tech/) <br/> Want to get a sense for what Playwright is and how it works *without having to install anything?* This browser-based sandbox is a perfect way to go. It comes with built-in examples (in Java, Python, JavaScript and Node.js) for popular testing scenarios - and you can modify, extend and share these to try your own experiments.
+ * Installed the Playwright Test runner
+ * Written and executed your first test script
+ * Explored headless and headed modes for testing
+ * Explored core configuration options
+ * Used fundamental concepts like assertions, fixtures and test hooks
+ * Explored command-line options
 
- * [Use Playwright In Local Dev Environment](https://playwright.dev/docs/intro) <br/> This is the preferred developer experience once you've decided to dive into the details. Playwright is a Node.js library, with browser binaries for [Chromium, Webkit and Firefox](https://github.com/microsoft/playwright#readme) to support cross-browser testing and automation. The [Getting Started](https://playwright.dev/docs/intro/) guide installs the default test runner and walks you through writing your first tests, showcasing core library features.
-
-Then check back for my next two posts for guided walkthroughs for each option.
+Get a head start exploring that tutorial, then check back for my walkthrough and learnings in the next post.

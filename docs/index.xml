@@ -18,23 +18,13 @@ I&amp;rsquo;ve decided to invest this month exploring a topic that fascinates me
     </item>
     
     <item>
-      <title>Glossary</title>
-      <link>https://nitya.github.io/learn-playwright/glossary/</link>
-      <pubDate>Wed, 17 Nov 2021 11:11:28 -0500</pubDate>
-      
-      <guid>https://nitya.github.io/learn-playwright/glossary/</guid>
-      <description>Explains terms, acronyms or concepts used frequently in the test automation or Playwright contexts - that may not always be familiar to the learner. I&amp;rsquo;ll link to these (as a canonical resource) from blog posts where those terms are used.
- Evergreen Used in context of agile software development, it&amp;rsquo;s about releasing small and frequent iterations of software (as opposed to traditional signature releases spread out over longer periods). Check out the Playwright changelog and What&amp;rsquo;s New In Playwright videos to get the highlights for each release.</description>
-    </item>
-    
-    <item>
       <title>About This Project</title>
       <link>https://nitya.github.io/learn-playwright/about/</link>
       <pubDate>Wed, 17 Nov 2021 10:38:00 -0400</pubDate>
       
       <guid>https://nitya.github.io/learn-playwright/about/</guid>
       <description>Hello - I&amp;rsquo;m Nitya! 👋🏽
-This blog documents my learning journey into all things related to cross-browser testing, test automation and end-to-end testing for web and multi-platform apps using the Playwright library and tools ecosystem.
+This blog documents my learning journey into all things related to cross-browser testing, test automation and end-to-end testing for web and multi-platform apps using the Playwright framework and tooling ecosystem.
 I&amp;rsquo;m kicking things off in Dec 2021 with a #30DaysOfPlaywright content series where I&amp;rsquo;ll everything from core testing concepts, to Playwright tools, APIs &amp;amp; best practices for end-to-end testing of modern web applications.
 Join me!</description>
     </item>

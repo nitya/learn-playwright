@@ -6,7 +6,7 @@ draft: false
 
 Hello - [I'm Nitya!](#about-me) 👋🏽
 
-This blog documents my learning journey into all things related to cross-browser testing, test automation and end-to-end testing for web and multi-platform apps using the [**Playwright**](https://playwright.dev) library and tools ecosystem.
+This blog documents my learning journey into all things related to cross-browser testing, test automation and end-to-end testing for web and multi-platform apps using the [**Playwright**](https://playwright.dev) framework and tooling ecosystem.
 
 I'm kicking things off in Dec 2021 with a [**#30DaysOfPlaywright**](#about-30daysofplaywright) content series where I'll everything from core testing concepts, to Playwright tools, APIs & best practices for end-to-end testing of modern web applications.
 
@@ -19,22 +19,22 @@ _Join me!_
 Humans learn best when we have [urgency, repetition and association](http://gretchenschmelzer.com/blog-1/2015/1/11/understanding-learning-and-memory-the-neuroscience-of-repetition) in our learning process. Doing something focused over a non-trivial period of time (like #30Days) can help. So I planned a #30DaysOfPlaywright activity with these learning goals in mind:
 
  * Learn core concepts and best practices for end-to-end testing (general)
- * Learn the features, tools and API provided by Playwright (specific)
+ * Learn the features, tools and API in the Playwright framework (specific)
  * Explore Playwright APIs in depth - understand capabilities & usage.
  * Explore Playwright Test runner - integration workflows & automation.
  * Explore Playwright Tools - for debugging and performance analysis.
  * Understand Testing Best Practices - testing scripts & app scenarios.
 
-Check back regularly for updated roadmap with blog post links:
+The list below provides a tentative schedule for topics - check back for updates with links to blog posts as they are published.
 
  * Dec 1, 2021 - [Hello, #30DaysOfPlaywright](../000-hello-30days)
- * Dec 2, 2021 - Try Playwright In The Browser
- * Dec 3, 2021 - Install Playwright For Local Dev
- * Dec 4, 2021 
- * Dec 5, 2021 
- * Dec 6, 2021 
- * Dec 7, 2021 
- * Dec 8, 2021 
+ * Dec 2, 2021 - Getting Started With Playwright
+ * Dec 3, 2021 - Playwright Fundamentals: Capabilities
+ * Dec 4, 2021 - Playwright Fundamentals: Locator
+ * Dec 5, 2021 - Playwright Fundamentals: Assertions
+ * Dec 6, 2021 - Playwright Fundamentals: Fixtures
+ * Dec 7, 2021 - Playwright Fundamentals: Configuration
+ * Dec 8, 2021 - Playwright Fundamentals: Command Line
 
 
 ---
@@ -47,7 +47,6 @@ I'll share key learning resources in each blog post - and compile them here into
 2. [Playwright Repo](https://github.com/microsoft/playwright)
 3. [Playwright Channel](https://www.youtube.com/channel/UC46Zj8pDH5tDosqm1gd7WTg/featured)
 4. [Follow @PlaywrightWeb](https://twitter.com/playwrightweb)
-5. [Try Playwright (in browser)](https://tryplaywright.tech)
 
 ---
 
