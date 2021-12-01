@@ -6,26 +6,37 @@
     <description>Recent content in Let&#39;s Learn: Playwright on Learn Playwright</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nitya.github.io/learn-playwright/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nitya.github.io/learn-playwright/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hello, Playwright</title>
-      <link>https://nitya.github.io/learn-playwright/001-hello/</link>
-      <pubDate>Thu, 14 Oct 2021 16:16:41 -0400</pubDate>
+      <title>Hello, #30DaysOfPlaywright</title>
+      <link>https://nitya.github.io/learn-playwright/000-hello-30days/</link>
+      <pubDate>Wed, 01 Dec 2021 10:22:54 -0500</pubDate>
       
-      <guid>https://nitya.github.io/learn-playwright/001-hello/</guid>
-      <description>A #30Days Journey This starts my #30Days exploration of web automation and end-to-end testing for modern web apps, using the Playwright library and API. What I hope to learn over the next month or so:
- Core concepts and terminology for web automation Playwright features and API Code tutorials from quickstart to advanced usage Best practices, real-world examples (community-driven) Relevant resources for self-study (join me!)  Good tasks to target for Day 001</description>
+      <guid>https://nitya.github.io/learn-playwright/000-hello-30days/</guid>
+      <description>Let&amp;rsquo;s Learn About Testing! It&amp;rsquo;s December 1! The new year is just over 30 days away so it&amp;rsquo;s the perfect time to make a learning resolution, get started on it now - and then check it off the very first day of the New Year! So what do you want to learn this year?
+I&amp;rsquo;ve decided to invest this month exploring a topic that fascinates me - end-to-end testing for modern web apps.</description>
     </item>
     
     <item>
-      <title>Learn Playwright</title>
+      <title>Glossary</title>
+      <link>https://nitya.github.io/learn-playwright/glossary/</link>
+      <pubDate>Wed, 17 Nov 2021 11:11:28 -0500</pubDate>
+      
+      <guid>https://nitya.github.io/learn-playwright/glossary/</guid>
+      <description>Explains terms, acronyms or concepts used frequently in the test automation or Playwright contexts - that may not always be familiar to the learner. I&amp;rsquo;ll link to these (as a canonical resource) from blog posts where those terms are used.
+ Evergreen Used in context of agile software development, it&amp;rsquo;s about releasing small and frequent iterations of software (as opposed to traditional signature releases spread out over longer periods). Check out the Playwright changelog and What&amp;rsquo;s New In Playwright videos to get the highlights for each release.</description>
+    </item>
+    
+    <item>
+      <title>About This Project</title>
       <link>https://nitya.github.io/learn-playwright/about/</link>
-      <pubDate>Wed, 06 Oct 2021 16:24:44 -0400</pubDate>
+      <pubDate>Wed, 17 Nov 2021 10:38:00 -0400</pubDate>
       
       <guid>https://nitya.github.io/learn-playwright/about/</guid>
-      <description>Welcome to my learning journey into end-to-end testing for modern web apps using Playwright. Want to join me - here&amp;rsquo;s what you need to know:
-What is Playwright? Playwright is an Node.js library that enables cross-browser web test automation across Chromium, Firefox and WebKit, with a single API.
- The project is open source. It supports headless mode across all browsers. It runs on Linux, MacOS and Windows platforms. The API is available in JavaScript, TypeScript, Python, Java and .</description>
+      <description>Hello - I&amp;rsquo;m Nitya! 👋🏽
+This blog documents my learning journey into all things related to cross-browser testing, test automation and end-to-end testing for web and multi-platform apps using the Playwright library and tools ecosystem.
+I&amp;rsquo;m kicking things off in Dec 2021 with a #30DaysOfPlaywright content series where I&amp;rsquo;ll everything from core testing concepts, to Playwright tools, APIs &amp;amp; best practices for end-to-end testing of modern web applications.
+Join me!</description>
     </item>
     
   </channel>

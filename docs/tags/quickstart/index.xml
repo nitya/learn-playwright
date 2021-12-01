@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>quickstart on Learn Playwright</title>
+    <link>https://nitya.github.io/learn-playwright/tags/quickstart/</link>
+    <description>Recent content in quickstart on Learn Playwright</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 Nov 2021 17:44:35 -0500</lastBuildDate><atom:link href="https://nitya.github.io/learn-playwright/tags/quickstart/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>#001: Getting Started</title>
+      <link>https://nitya.github.io/learn-playwright/001-getting-started/</link>
+      <pubDate>Tue, 30 Nov 2021 17:44:35 -0500</pubDate>
+      
+      <guid>https://nitya.github.io/learn-playwright/001-getting-started/</guid>
+      <description>Day 1: Review This was my plan for Day 1 - here&amp;rsquo;s what I actually achieved:
+ Reviewed README.md to get high-level overview of Playwright. Completed Getting Started to validate my local testing setup. Explored Try Playwright in browser to review example scenarios  Let&amp;rsquo;s dive into each of these.
+ Playwright: An Overview What is Playwright? It&amp;rsquo;s a Node.JS library that can automate cross-browser testing (against Chromium, Firefox and WebKit based browsers) with a single unified API.</description>
+    </item>
+    
+  </channel>
+</rss>

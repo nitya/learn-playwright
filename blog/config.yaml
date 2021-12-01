@@ -39,6 +39,7 @@ params:
   customJs:
     - js/custom_01.js
     - js/custom_02.js
+  readingTime: true
 
 menu:
   nav:

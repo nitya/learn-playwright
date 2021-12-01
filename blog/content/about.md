@@ -1,49 +1,61 @@
 ---
-title: "Learn Playwright"
-date: 2021-10-06T16:24:44-04:00
+title: "About This Project"
+date: 2021-11-17T10:38:00-04:00
 draft: false
 ---
 
-Welcome to my learning journey into end-to-end testing for modern web apps using [Playwright](https://playwright.dev/). Want to join me? Here's what you need to know:
+Hello - [I'm Nitya!](#about-me) 👋🏽
+
+This blog documents my learning journey into all things related to cross-browser testing, test automation and end-to-end testing for web and multi-platform apps using the [**Playwright**](https://playwright.dev) library and tools ecosystem.
+
+I'm kicking things off in Dec 2021 with a [**#30DaysOfPlaywright**](#about-30daysofplaywright) content series where I'll everything from core testing concepts, to Playwright tools, APIs & best practices for end-to-end testing of modern web applications.
+
+_Join me!_
+
+---
+
+### My #30DaysOfPlaywright Quickstart
+
+Humans learn best when we have [urgency, repetition and association](http://gretchenschmelzer.com/blog-1/2015/1/11/understanding-learning-and-memory-the-neuroscience-of-repetition) in our learning process. Doing something focused over a non-trivial period of time (like #30Days) can help. So I planned a #30DaysOfPlaywright activity with these learning goals in mind:
+
+ * Learn core concepts and best practices for end-to-end testing (general)
+ * Learn the features, tools and API provided by Playwright (specific)
+ * Explore Playwright APIs in depth - understand capabilities & usage.
+ * Explore Playwright Test runner - integration workflows & automation.
+ * Explore Playwright Tools - for debugging and performance analysis.
+ * Understand Testing Best Practices - testing scripts & app scenarios.
+
+Check back regularly for updated roadmap with blog post links:
+
+ * Dec 1, 2021 - [Hello, #30DaysOfPlaywright](../000-hello-30days)
+ * Dec 2, 2021 - Try Playwright In The Browser
+ * Dec 3, 2021 - Install Playwright For Local Dev
+ * Dec 4, 2021 
+ * Dec 5, 2021 
+ * Dec 6, 2021 
+ * Dec 7, 2021 
+ * Dec 8, 2021 
 
 
-## What is Playwright?
+---
 
-[Playwright](https://playwright.dev/) is an Node.js library that enables **cross-browser** **web test automation** across [Chromium](https://www.chromium.org/Home), [Firefox](https://www.mozilla.org/en-US/firefox/new/) and [WebKit](https://webkit.org/), *with a single API*. 
+### Relevant Resources
 
- * The project is [open source](https://github.com/microsoft/playwright).
- * It supports [headless](https://en.wikipedia.org/wiki/Headless_browser) and [headed](https://playwright.dev/docs/ci#running-headed) testing modes.
- * It has a built-in [test runner](https://playwright.dev/docs/intro) and [a library](https://playwright.dev/docs/library) for third-party integration.
- * The API is [available](https://playwright.dev/docs/languages) in JavaScript, TypeScript, Python, Java and .NET.
- * It browser binaries work [on Linux, MacOS and Windows](https://playwright.dev/docs/library#system-requirements).
+I'll share key learning resources in each blog post - and compile them here into one collection for easy reference as I progress. 
 
+1. [Playwright Documentation](https://playwright.dev/docs/intro)
+2. [Playwright Repo](https://github.com/microsoft/playwright)
+3. [Playwright Channel](https://www.youtube.com/channel/UC46Zj8pDH5tDosqm1gd7WTg/featured)
+4. [Follow @PlaywrightWeb](https://twitter.com/playwrightweb)
+5. [Try Playwright (in browser)](https://tryplaywright.tech)
 
-## What is Cross-Browser Testing?
+---
 
-[Cross-Browser Testing](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction) is the practice of _making sure that the web sites and web apps you create work across an acceptable number of web browsers._ 
+### About Me
 
-This includes checking how your app performs given the diverse browser platform capabilities (APIs), supported device types (mobile, desktop, embedded, TV) - and ensuring inclusive operation (accessibility etc.)
+I'm a PhD and Polyglot with a background in mobile, web and distributed computing. Find me on [Twitter](https://twitter.com/nitya), [GitHub](https://github.com/nitya), [dev.to](https://dev.to/nitya) and [Tech Community](https://techcommunity.microsoft.com/t5/user/viewprofilepage/user-id/282974).
 
-> Why cross-browser testing?
+I'm currently a [Senior Cloud Advocate](https://developer.microsoft.com/en-us/advocates/) for [Microsoft Azure](https://azure.microsoft.com), helping mobile and web developers translate their awareness of Cloud and AI technologies into actionable learning and impact on software and product development. 
 
-A key value proposition for web apps is their reach. Users can easily discover web sites and apps simply by finding, sharing or browsing links (URLs) - and they get access to the latest versions by default (no need to _update_ apps).
-
-The challenge though is that users will access web apps from a variety of devices (mobile, desktop, embedded, television, auto) and browser platforms (Safari, Chrome, Edge, Firefox, Opera, Brave etc.) _and expect the same, consistent experience across them all_.
-
-Cross-browser testing is our way of ensuring that our designed user experience lives up to the reality.
-
-
-## What is Web Automation?
-
-Services like Azure DevOps provide built-in support for  [exploratory and manual testing](https://docs.microsoft.com/en-us/azure/devops/test/overview?view=azure-devops#manual-testing) tools that individuals and teams can use throughout their development workflows. However, as the frequency of testing grows (e.g., with more feature commits or bug fixes), and as the granularity of testing targets increases (e.g., browser and device platforms), we need to ways to **scale** the testing strategy. 
-
-Web Automation or [Automated testing](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing) uses task runners with testing tools, to speed up and automate your testing workflows at the granularity and frequency you need. Playwright has a built-in test runner ([Playwright Test](https://playwright.dev/docs/intro)) and integrates with [third party runners](https://playwright.dev/docs/test-runners/) using the [Playwright Library](https://playwright.dev/docs/library) if needed.
-
-
-## Getting started with Playwright
-
-The best resources for beginners is the [Playwright Documentation](). The [Getting Started](https://playwright.dev/docs/intro) guide walks you through the installation and your first test runner execution.
-
-Want to get a sense for what Playwright does without installing anything? Check out [Try Playwright](https://try.playwright.tech/) - an experimental browser-based sandbox with .NET, JavaScript, Python and Java examples.
-
-I'm also documenting my own learning journey - from general web automation (concepts) to Playwright-specific automation (practice) - on this blog. Keep an eye out for an upcoming [#30Days](../tags/30days/) series that organizes posts into a more structured month-of-learning journey.
+I am also a [Visual Storyteller](https://speakerdeck.com/nitya/visual-storytelling-for-tech-let-me-draw-you-a-picture) 
+promoting [visual literacy](https://en.wikipedia.org/wiki/Visual_literacy) skills to support technology learning and content creation. Check out [#VisualizeIT](aka.ms/visualize-it) for free workshops, visit [my blog](https://sketchthedocs.dev/about/) for details and follow [@SketchTheDocs](https://twitter.com/sketchthedocs) for updates.

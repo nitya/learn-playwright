@@ -6,11 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.88.1" />
-  <link rel="canonical" href="/learn-playwright/tags/30days/">
+  <link rel="canonical" href="/learn-playwright/001-getting-started/">
 
   
     
-    <meta name="description" content="30Days">
+    <meta name="description" content="Day 1: Review This was my plan for Day 1 - here’s what I actually achieved:
+ Reviewed README.md to get high-level overview of Playwright. Completed Getting Started to validate my local testing setup. Explored Try Playwright in browser to review example scenarios  Let’s dive into each of these.
+ Playwright: An Overview What is Playwright? It’s a Node.JS library that can automate cross-browser testing (against Chromium, Firefox and WebKit based browsers) with a single unified API.">
   
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://nitya.github.io/learn-playwright/apple-touch-icon.png">
@@ -60,7 +62,7 @@
 
   
   
-  <title>30Days | Learn Playwright</title>
+  <title>#001: Getting Started | Learn Playwright</title>
 </head>
 
   <body>
@@ -209,7 +211,7 @@
       
       
       
-      <a href="/learn-playwright/post/" >
+      <a href="/learn-playwright/post/" aria-current="page">
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -222,7 +224,7 @@
       
       
       
-      <a href="/learn-playwright/tags/" aria-current="page">
+      <a href="/learn-playwright/tags/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -265,36 +267,107 @@
       <div class="main-and-footer">
         <div>
           
-<main id="main">
-  <h1>30Days</h1>
-  
-  <input
-    id="search"
-    type="text"
-    placeholder="Search by title..."
-    aria-label="Search by title"
-  />
-  
-  <ul class="patterns-list" id="list">
+  <main id="main">
+    <h1>
+      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+        <use xlink:href="#bookmark"></use>
+      </svg>
+      #001: Getting Started
+    </h1>
+
+    <div class="date">
+      
+      
+      <strong>Publish date: </strong>Nov 30, 2021
+      
+        
+      
+    </div>
+
     
-    <li>
-      <h2>
-        <a href="/learn-playwright/000-hello-30days/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          Hello, #30DaysOfPlaywright
-        </a>
-      </h2>
+      <div class="tags">
+        <strong>Tags: </strong>
+        <ul aria-label="tags">
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              
+              <a href="/learn-playwright/tags/quickstart/">quickstart</a>
+            </li>
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              
+              <a href="/learn-playwright/tags/30days/">30Days</a>
+            </li>
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              
+              <a href="/learn-playwright/tags/playwright/">playwright</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+
+    
+  <nav class="toc" aria-labelledby="toc-heading">
+    <strong id="toc-heading">Table of Contents</strong>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#day-1-review">Day 1: Review</a></li>
+    <li><a href="#playwright-an-overview">Playwright: An Overview</a>
+      <ul>
+        <li><a href="#what-is-playwright">What is Playwright?</a></li>
+      </ul>
     </li>
-    
+    <li><a href="#getting-started-local-testing">Getting Started: Local Testing</a></li>
+    <li><a href="#try-playwright-in-browser-sandbox">Try Playwright: In-Browser Sandbox</a></li>
+    <li><a href="#day-2-planning">Day 2: Planning</a></li>
   </ul>
-</main>
+</nav>
+  </nav>
+
+
+
+    <h2 id="day-1-review">Day 1: Review</h2>
+<p><a href="http://localhost:1313/learn-playwright/000-hello/#things-to-do-day-1">This</a> was my plan for Day 1 - here&rsquo;s what I actually achieved:</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Reviewed <a href="https://github.com/microsoft/playwright">README.md</a> to get high-level overview of Playwright.</li>
+<li><input checked="" disabled="" type="checkbox"> Completed <a href="">Getting Started</a> to validate my local testing setup.</li>
+<li><input checked="" disabled="" type="checkbox"> Explored <a href="https://try.playwright.tech/">Try Playwright</a> in browser to review example scenarios</li>
+</ul>
+<p>Let&rsquo;s dive into each of these.</p>
+<hr>
+<h2 id="playwright-an-overview">Playwright: An Overview</h2>
+<h3 id="what-is-playwright">What is Playwright?</h3>
+<p>It&rsquo;s a Node.JS library that can <em>automate cross-browser testing</em> (against Chromium, Firefox and WebKit based browsers) with a <em>single unified API</em>.</p>
+<p>Playwright supports headless execution (by default) but can <a href="https://playwright.dev/java/docs/ci#running-headed">run in headed mode</a> by setting a flag. And it&rsquo;s ever-green, capable, reliable and fast.</p>
+<ul>
+<li>Ever-green = maintained current with continuous updates</li>
+<li><a href="https://github.com/microsoft/playwright#capabilities">Capable</a> of supporting testing of growing list of web capabilities.</li>
+<li><a href="https://playwright.dev/docs/why-playwright#fast-and-reliable-execution">Fast and Reliable</a> with auto-wait APIs, timeout-free automation, browser contexts for isolation, resilient element selectors.</li>
+</ul>
+<p>According to the <a href="https://github.com/microsoft/playwright/releases">Changelog</a>, the most recent major release was <a href="https://github.com/microsoft/playwright/releases/tag/v1.16.0">v1.16</a>. It introduced <a href="https://playwright.dev/docs/next/api/class-apirequestcontext">API Testing</a> for validating server-side behaviors in conjunction with client-side interactions - and added <a href="https://playwright.dev/docs/next/test-reporters/#html-reporter">HTML Reporter</a> as a reporting option.</p>
+<hr>
+<h2 id="getting-started-local-testing">Getting Started: Local Testing</h2>
+<hr>
+<h2 id="try-playwright-in-browser-sandbox">Try Playwright: In-Browser Sandbox</h2>
+<hr>
+<h2 id="day-2-planning">Day 2: Planning</h2>
+
+  </main>
+  <div id="disqus-container">
+  
+</div>
+
 
           
             <footer role="contentinfo">

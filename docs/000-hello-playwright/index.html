@@ -6,11 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.88.1" />
-  <link rel="canonical" href="/learn-playwright/tags/30days/">
+  <link rel="canonical" href="/learn-playwright/000-hello-playwright/">
 
   
     
-    <meta name="description" content="30Days">
+    <meta name="description" content="Learning Objectives Welcome to my “Learn Playwright” journey!
+The New Year is 30 days away. Each year, I make a resolution to learn something new from core concepts to hands-on usage and best practices. This year, I wanted to focus on end-to-end testing with the goal of creating correct and consistent user experiences for web apps across diverse device and browser platforms. And I want to use Playwright to get hands-on exploration.">
   
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://nitya.github.io/learn-playwright/apple-touch-icon.png">
@@ -60,7 +61,7 @@
 
   
   
-  <title>30Days | Learn Playwright</title>
+  <title>#000 - Hello, Playwright! | Learn Playwright</title>
 </head>
 
   <body>
@@ -209,7 +210,7 @@
       
       
       
-      <a href="/learn-playwright/post/" >
+      <a href="/learn-playwright/post/" aria-current="page">
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -222,7 +223,7 @@
       
       
       
-      <a href="/learn-playwright/tags/" aria-current="page">
+      <a href="/learn-playwright/tags/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -265,36 +266,112 @@
       <div class="main-and-footer">
         <div>
           
-<main id="main">
-  <h1>30Days</h1>
-  
-  <input
-    id="search"
-    type="text"
-    placeholder="Search by title..."
-    aria-label="Search by title"
-  />
-  
-  <ul class="patterns-list" id="list">
+  <main id="main">
+    <h1>
+      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+        <use xlink:href="#bookmark"></use>
+      </svg>
+      #000 - Hello, Playwright!
+    </h1>
+
+    <div class="date">
+      
+      
+      <strong>Publish date: </strong>Nov 30, 2021
+      
+        
+      
+    </div>
+
     
-    <li>
-      <h2>
-        <a href="/learn-playwright/000-hello-30days/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          Hello, #30DaysOfPlaywright
-        </a>
-      </h2>
-    </li>
+
     
+  <nav class="toc" aria-labelledby="toc-heading">
+    <strong id="toc-heading">Table of Contents</strong>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#learning-objectives">Learning Objectives</a></li>
+    <li><a href="#what-is-playwright">What is Playwright</a></li>
+    <li><a href="#why-playwright">Why Playwright?</a></li>
+    <li><a href="#try-playwright-in-browser">Try Playwright (In-Browser)</a></li>
+    <li><a href="#install-playwright-on-local-dev-machine">Install Playwright (On Local Dev Machine)</a></li>
+    <li><a href="#day-1-summary">Day 1: Summary</a></li>
   </ul>
-</main>
+</nav>
+  </nav>
+
+
+
+    <h2 id="learning-objectives">Learning Objectives</h2>
+<p>Welcome to my &ldquo;Learn Playwright&rdquo; journey!</p>
+<p>The New Year is 30 days away. Each year, I make a resolution to learn something new from core concepts to hands-on usage and best practices. This year, I wanted to focus on <strong>end-to-end testing</strong> with the goal of creating correct and consistent user experiences for web apps across diverse device and browser platforms. And I want to use <a href="https://playwright.dev">Playwright</a> to get hands-on exploration.</p>
+<p>It&rsquo;s December 1, and that gives me 30 days till the New Year! Each year, I make a resolution to learn something new - from core concepts to advanced usage and best practices. This year, I decided to start on that resolution early</p>
+<ul>
+<li>Understand <a href="https://playwright.dev/">what Playwright is</a>, and <a href="https://playwright.dev/docs/why-playwright#support-for-all-browsers">why it&rsquo;s useful</a></li>
+<li>Explore Playwright <a href="https://tryplaywright.tech">in the browser</a> (experimental, no installs needed)</li>
+<li>Complete the <a href="https://playwright.dev/docs/intro">Getting Started</a> guide (install, validate setup)</li>
+</ul>
+<hr>
+<h2 id="what-is-playwright">What is Playwright</h2>
+<p>Playwright is an <a href="https://github.com/microsoft/playwright">open-source</a> Node.JS library (with supporting tools) that enables end-to-end testing for modern web apps. It&rsquo;s currently at <a href="https://www.youtube.com/watch?v=OQKwFDmY64g">v1.16</a>.</p>
+<p>Here are the main benefits from a developer perspective:</p>
+<ul>
+<li>Supports <a href="https://playwright.dev/docs/why-playwright#support-for-all-browsers">Cross-browser testing</a> with Chromium, WebKit, Firefox</li>
+<li>Has <a href="https://playwright.dev/docs/api/class-playwright">Single API</a> to simplify cross-browser test automation.</li>
+<li>Has <a href="https://playwright.dev/docs/intro">Playwright Test</a> as a built-in test runner for quickstarts</li>
+<li>Has <a href="https://playwright.dev/docs/library">Playwright Library</a> to simplify third-party app/runner integrations</li>
+<li>Supports <a href="https://playwright.dev/docs/languages">Multiple Languages</a> - including JS/TS, Java, Python, .NET</li>
+</ul>
+<hr>
+<h2 id="why-playwright">Why Playwright?</h2>
+<p>Playwright provides ever-green fast, reliable and capable cross-browser testing and automation for modern web apps.</p>
+<ul>
+<li><a href="https://www.youtube.com/channel/UC46Zj8pDH5tDosqm1gd7WTg">Ever-green</a> =&gt; get iterative, continuous updates (vs. monolothic large releases) for faster access to new features, bug fixes.</li>
+<li>Cross-browser = full API coverage for Chromium, WebKit, Firefox, with browser binaries for Linux, Windows and macOS.</li>
+<li>Mobile testing = use <a href="https://playwright.dev/docs/emulation">device emulation</a> to test responsive UI against mobile web browsers for form factors (phone, tablet) or modalities (foldables)</li>
+<li>Fast + Reliable = <a href="">timeout-free automation</a> (receives browser signals, is event-driven), <a href="https://playwright.dev/docs/core-concepts">browser contexts</a> (1 browser, many isolated execution environments), <a href="https://playwright.dev/docs/actionability">auto-waits for elements</a> (to be ready), resilient <a href="https://playwright.dev/docs/selectors">string-based element selectors</a> for convenience</li>
+<li>Capable = powerful <a href="https://playwright.dev/docs/why-playwright/#powerful-automation-capabilities">automation support</a> support for multiple pages, input events, dark mode, file actions, network interception, web components etc.</li>
+</ul>
+<p><em>I&rsquo;ll explore these features and try out relevant APIs in future posts.</em></p>
+<hr>
+<h2 id="try-playwright-in-browser">Try Playwright (In-Browser)</h2>
+<p><a href="https://try.playwright.tech/">Try Playwright</a> is an interactive browser-based playground where you can <em>execute and share Playwright scripts in your browser</em> to jumpstart your Playwright exploration - backed by an <a href="https://github.com/mxschmitt/try-playwright">open-source</a> project!</p>
+<p>It comes with a set of built-in examples (for .NET, JavaScript, Java, and Python) that showcase capabilities like:</p>
+<ul>
+<li>Creating and saving a screenshot (of web page)</li>
+<li>Creating and saving a PDF (of web page)</li>
+<li>Logging request/response data (on navigating to link)</li>
+<li>Using device emulation (e.g., to screenshot page)</li>
+<li>Setting browser context (geolocation, permissions) pre-testing</li>
+<li>Recording a video (capturing sequence of events)</li>
+<li>Logging and modifying network requests</li>
+<li>Crawling a website (extracting content, taking screenshots)</li>
+<li>End-to-End testing workflow (for a to-do app)</li>
+</ul>
+<p>Select an example and click <code>Run</code> to see the relevant output <em>in browser</em>. Then modify or extend the example code to explore more capabilities interactively. <em>I&rsquo;ll explore these in more detail in future posts, and share more examples to try out!</em></p>
+<p>You may also be able to <a href="https://github.com/mxschmitt/try-playwright/blob/master/README.md">setup a TryPlaywright env on k3s</a> to test web apps in embedded device contexts (where k3s is a lightweight Kubernetes env for IoT and Edge computing). <em>I have not tried this yet!</em></p>
+<hr>
+<h2 id="install-playwright-on-local-dev-machine">Install Playwright (On Local Dev Machine)</h2>
+<p>I have Node.js pre-installed on my machine (using <a href="https://github.com/nvm-sh/nvm">NVM</a>) so I thought I&rsquo;d time how long it took for me to complete the <a href="https://playwright.dev/docs/intro">Getting Started</a> guide to setup and validate my local testing environment for Playwright.</p>
+<hr>
+<h2 id="day-1-summary">Day 1: Summary</h2>
+<p>Tasks Completed:</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Bookmarked key Playwright <a href="../about/#learning-resources">learning resources</a></li>
+<li><input checked="" disabled="" type="checkbox"> Browsed key Docs (<a href="https://playwright.dev/docs/intro">Playwright Test</a>, <a href="https://playwright.dev/docs/library">Playwright Library</a>, <a href="https://playwright.dev/docs/why-playwright">Why Playwright</a>)</li>
+<li><input checked="" disabled="" type="checkbox"> Explored in-browser sandbox (<a href="https://try.playwright.tech/?e=mobile-and-geolocation-emulation&amp;l=javascript">Try.Playwright with JavaScript</a>)</li>
+<li><input checked="" disabled="" type="checkbox"> Completed <a href="https://playwright.dev/docs/intro">Getting Started</a> Guide (Installed Playwright Test runner)</li>
+</ul>
+<p>Learnings:</p>
+<ul>
+<li></li>
+</ul>
+
+  </main>
+  <div id="disqus-container">
+  
+</div>
+
 
           
             <footer role="contentinfo">

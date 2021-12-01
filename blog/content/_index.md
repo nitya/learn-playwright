@@ -1,19 +1,19 @@
 ---
 title: "Let's Learn: Playwright"
-date: 2021-10-13
+date: 2021-11-30
 draft: false
 ---
 
-This is a blog to document my learning journey into [Cross-browser testing](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) and [Test Automation](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing) -- with a focus on exploring [Playwright](https://playwright.dev) as my tool of choice for hands-on experimentation. My goals are:
+[Playwright](https://playwright.dev) is an [open-source](https://github.com/microsoft/playwright) Node.js library to automate cross-browser testing for [Chromium](https://www.chromium.org/Home), [Firefox](https://www.mozilla.org/firefox) and [WebKit](https://webkit.org/) _with a single API_,
+simplifying the developer experience and workflows for end-to-end testing of modern web apps.
 
-* Learn core fundamentals for end-to-end testing
-* Explore Playwright for automated cross-browser testing
-* Understand best practices for modern web testing
-* Share my learning in a structured way to help others
-
-Learn more [About](about) this project and join me!
+But - what is cross-browser testing? Why is test automation important to modern web app developers? How can Playwright help us design and execute effective testing strategies and automation? This blog documents my learning journey as I explore these questions and more starting with [#30DaysOfPlaywright](about/#my-30daysofplaywright-quickstart). Join me!
 
 
-## Recent Activity
 
- * #000 | [Hello, Playwright](001-hello)
+---
+
+## Recent News & Activity
+
+ * Dec 01, 2021 - [Hello, #30DaysOfPlaywright!](000-hello-30days)
+ * Nov 18, 2021 - [Playwright v1.17 Release Candidate is out](https://twitter.com/playwrightweb/status/1461252085664522242)

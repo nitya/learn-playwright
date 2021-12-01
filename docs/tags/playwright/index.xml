@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>general on Learn Playwright</title>
-    <link>https://nitya.github.io/learn-playwright/tags/general/</link>
-    <description>Recent content in general on Learn Playwright</description>
+    <title>playwright on Learn Playwright</title>
+    <link>https://nitya.github.io/learn-playwright/tags/playwright/</link>
+    <description>Recent content in playwright on Learn Playwright</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Dec 2021 10:22:54 -0500</lastBuildDate><atom:link href="https://nitya.github.io/learn-playwright/tags/general/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Dec 2021 10:22:54 -0500</lastBuildDate><atom:link href="https://nitya.github.io/learn-playwright/tags/playwright/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello, #30DaysOfPlaywright</title>
       <link>https://nitya.github.io/learn-playwright/000-hello-30days/</link>
