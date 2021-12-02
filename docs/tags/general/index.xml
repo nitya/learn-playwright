@@ -6,7 +6,19 @@
     <description>Recent content in general on Learn Playwright</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Dec 2021 10:22:54 -0500</lastBuildDate><atom:link href="https://nitya.github.io/learn-playwright/tags/general/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Dec 2021 16:21:13 -0500</lastBuildDate><atom:link href="https://nitya.github.io/learn-playwright/tags/general/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>#001 - Getting Started (Part 1)</title>
+      <link>https://nitya.github.io/learn-playwright/001-getting-started-setup/</link>
+      <pubDate>Thu, 02 Dec 2021 16:21:13 -0500</pubDate>
+      
+      <guid>https://nitya.github.io/learn-playwright/001-getting-started-setup/</guid>
+      <description>Getting Started - Part 1  Welcome to Day 1 of #30DaysOfPlaywright!!
+ Today&amp;rsquo;s goal is to make progress on the Getting Started tutorial which should get us set up with the Playwright Test runner in our local development environment - and get us configured to do our first test run.
+There&amp;rsquo;s a lot covered in there, so I&amp;rsquo;ve decided to break this into multiple parts.
+  Part 1: - Install the Playwright Test runner and validate setup by completing your first test run with the sample test script.</description>
+    </item>
+    
     <item>
       <title>Hello, #30DaysOfPlaywright</title>
       <link>https://nitya.github.io/learn-playwright/000-hello-30days/</link>
