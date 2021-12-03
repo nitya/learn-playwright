@@ -17,6 +17,7 @@ Join me!
 
 ## Recent News & Activity
 
+ * Dec 02, 2021 - [Getting Started - Part 1](001-getting-started-setup/)
  * Dec 01, 2021 - [Hello, #30DaysOfPlaywright!](000-hello-30days)
  * Nov 24, 2021 - [NextJS adds official example for Playwright testing](https://twitter.com/maxibanki/status/1463443111099707392)
  * Nov 18, 2021 - [Playwright v1.17 Release Candidate is out](https://twitter.com/playwrightweb/status/1461252085664522242)

@@ -28,11 +28,11 @@ Humans learn best when we have [urgency, repetition and association](http://gret
 The list below provides a tentative schedule for topics - check back for updates with links to blog posts as they are published.
 
  * Dec 1, 2021 - [Hello, #30DaysOfPlaywright](../000-hello-30days)
- * Dec 2, 2021 - Getting Started With Playwright
- * Dec 3, 2021 - Playwright Fundamentals: Capabilities
- * Dec 4, 2021 - Playwright Fundamentals: Locator
- * Dec 5, 2021 - Playwright Fundamentals: Assertions
- * Dec 6, 2021 - Playwright Fundamentals: Fixtures
+ * Dec 2, 2021 - [Getting Started - Part 1](001-getting-started-setup/)
+ * Dec 3, 2021 - Getting Started - Part 2
+ * Dec 4, 2021 - Playwright Fundamentals: Web Assertions
+ * Dec 5, 2021 - Playwright Fundamentals: Test Fixtures
+ * Dec 6, 2021 - Playwright Fundamentals: Test Hooks
  * Dec 7, 2021 - Playwright Fundamentals: Configuration
  * Dec 8, 2021 - Playwright Fundamentals: Command Line
 
