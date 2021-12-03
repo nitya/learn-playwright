@@ -10,7 +10,7 @@
 
   
     
-    <meta name="description" content="Getting Started - Part 1  Welcome to Day 1 of #30DaysOfPlaywright!!
+    <meta name="description" content="Welcome to Day 1 of #30DaysOfPlaywright!!
  Today’s goal is to make progress on the Getting Started tutorial which should get us set up with the Playwright Test runner in our local development environment - and get us configured to do our first test run.
 There’s a lot covered in there, so I’ve decided to break this into multiple parts.
   Part 1: - Install the Playwright Test runner and validate setup by completing your first test run with the sample test script.">
@@ -282,6 +282,9 @@ There’s a lot covered in there, so I’ve decided to break this into multiple 
       <strong>Publish date: </strong>Dec 2, 2021
       
         
+          <br>
+          <strong>Last updated: </strong>Dec 2, 2021
+        
       
     </div>
 
@@ -330,6 +333,7 @@ There’s a lot covered in there, so I’ve decided to break this into multiple 
     <li><a href="#5-configure-test-runs">5. Configure Test Runs</a></li>
     <li><a href="#6-explore-command-line-options">6. Explore Command Line Options</a></li>
     <li><a href="#7-scaffold-e2e-tests-for-project">7. Scaffold e2e tests for project</a></li>
+    <li><a href="#relevant-resources">Relevant Resources</a></li>
     <li><a href="#day-1-review">Day 1: Review</a></li>
     <li><a href="#day-2-up-next">Day 2: Up Next</a></li>
   </ul>
@@ -338,8 +342,7 @@ There’s a lot covered in there, so I’ve decided to break this into multiple 
 
 
 
-    <h1 id="getting-started---part-1">Getting Started - Part 1</h1>
-<blockquote>
+    <blockquote>
 <p>Welcome to Day 1 of #30DaysOfPlaywright!!</p>
 </blockquote>
 <p>Today&rsquo;s goal is to make progress on the <a href="https://playwright.dev/docs/intro">Getting Started</a> tutorial which should get us set up with the Playwright Test runner in our local development environment - and get us configured to do our first test run.</p>
@@ -374,11 +377,12 @@ There’s a lot covered in there, so I’ve decided to break this into multiple 
 <p>The process is fairly straightforward once you have Node and NPM installed. (Hint: If you are installing Node for the first time, I recommend using the <a href="https://github.com/nvm-sh/nvm#installing-and-updating">Node Version Manager</a> to install and use different Node.js versions easily).</p>
 <hr>
 <h2 id="2-install-browsers">2. Install Browsers</h2>
-<p>By default, Playwright Test runs in headless mode (here is no visible browser graphical user interface during testing). It can be configured to <a href="https://playwright.dev/docs/ci#running-headed">run in headed mode</a> using a command-line flag but you&rsquo;ll need to ensure that required browser binaries exist in your local environment.</p>
-<p>The command below installs <em>all</em> supported browser binaries, which is useful for cross-browser testing later.</p>
+<p>By default, Playwright Test runs in headless mode (there is no visible browser graphical user interface during testing) - but it can be configured to <a href="https://playwright.dev/docs/ci#running-headed">run in headed mode</a> using a command-line flag as we&rsquo;ll see later.</p>
+<p>Each version of Playwright <a href="https://playwright.dev/docs/browsers">needs specific versions of browser binaries to operate</a>. You can <a href="https://playwright.dev/docs/browsers#installing-browsers">manage the browser install</a> process to customize which binaries are installed locally (and where), or elect to not do fresh installs and use existing browser channels instead.</p>
+<p>The command below installs <em>all</em> supported browser binaries by default.</p>
 <pre><code class="language-js">$ npx playwright install
 </code></pre>
-<p>Each version of Playwright <a href="https://playwright.dev/docs/browsers">needs specific versions of browser binaries to operate</a> - you can <a href="https://playwright.dev/docs/browsers#installing-browsers">manage the browser install</a> for more granular control over the process. Browser binaries are installed by default in OS-specfic cache folders - it&rsquo;s useful to check those to see which binaries you currently have installed in your local device. For example, here&rsquo;s my macOS device listing:</p>
+<p>Browser binaries are installed in OS-specfic cache folders by default - it&rsquo;s useful to check that directory to see which binaries you currently have installed in your development environement. For example, here&rsquo;s my macOS device listing:</p>
 <pre><code>$ du -hs ~/Library/Caches/ms-playwright/*
 343M	chromium-930007
 345M	chromium-939194
@@ -490,6 +494,7 @@ Running 3 tests using 3 workers
 
 </code></pre>
 <p>You can add multiple configurations for the same browser - for instance, I added the following as a fourth project to test against desktop and mobile targets. Re-running the test should give a successful outcome with 4 tests using 4 workers.</p>
+<p>(Sidebar: Want to know supported device profiles and the default Browser type they are associated with for testing? <a href="https://github.com/microsoft/playwright/blob/bdfe92f8a7499644c431c5c05de17d71e6006084/packages/playwright-core/src/server/deviceDescriptorsSource.json">Check out the source!</a>)</p>
 <pre><code class="language-js">    {
       name: 'Mobile Chrome',
       use: { ...devices['Pixel 5'] },
@@ -533,7 +538,7 @@ Usage: npx playwright test [options] [test-filter...]
 <hr>
 <h2 id="7-scaffold-e2e-tests-for-project">7. Scaffold e2e tests for project</h2>
 <p>If you watched the <a href="https://www.youtube.com/watch?v=JjhY2aFBTTk&amp;t=1s">Introduction to Playwright Test runner</a> talk, you may recall seeing the <code>npm init playwright</code> command being used to scaffold out a complete end-to-end testing setup for a new project.</p>
-<p>This uses the <a href="https://github.com/microsoft/create-playwright"><code>create-playwright</code></a> package to support quickstarts with a single command that installs Playwright (and dependencies) and sets up  basic testing and configuration files for end-to-end testing workflows. This is a good way to also initialize <em>existing</em> projects to use Playwright for testing.</p>
+<p>This uses the <a href="https://github.com/microsoft/create-playwright"><code>create-playwright</code></a> package to support quickstarts with a single command that installs Playwright (and dependencies) and sets up  basic testing and configuration files for end-to-end testing workflows. This is a good way to also initialize <em>existing</em> projects to use Playwright for testing. Here&rsquo;s a quick look at how this works for intializing a new &ldquo;demo&rdquo; project.</p>
 <pre><code class="language-js">$ npm init playwright demo  
 
 Getting started with writing end-to-end tests with Playwright:
@@ -559,6 +564,14 @@ Visit https://playwright.dev/docs/intro for more information. ✨
 Happy hacking! 🎭
 </code></pre>
 <hr>
+<h2 id="relevant-resources">Relevant Resources</h2>
+<p>Some resources to explore at this point in your journey:</p>
+<ul>
+<li><a href="https://playwright.dev/docs/browsers/">Browser</a> installation and management.</li>
+<li><a href="https://playwright.dev/docs/test-configuration">Configuration</a> options for Playwright Test.</li>
+<li><a href="https://playwright.dev/docs/test-cli">Command-line</a> options for Playwright Test.</li>
+<li><a href="https://playwright.dev/docs/emulation">Device Emulation</a> and supported <a href="https://github.com/microsoft/playwright/blob/bdfe92f8a7499644c431c5c05de17d71e6006084/packages/playwright-core/src/server/deviceDescriptorsSource.json"> descriptors</a> for configuration.</li>
+</ul>
 <h2 id="day-1-review">Day 1: Review</h2>
 <p>If you made it this far, congratulations! Here&rsquo;s a checklist of tasks that you should have completed.</p>
 <ul>

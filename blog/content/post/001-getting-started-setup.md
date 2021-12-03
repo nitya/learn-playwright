@@ -6,8 +6,6 @@ toc: true
 tags: [general, playwright, 30Days]
 ---
 
-# Getting Started - Part 1
-
 > Welcome to Day 1 of #30DaysOfPlaywright!! 
 
 Today's goal is to make progress on the [Getting Started](https://playwright.dev/docs/intro) tutorial which should get us set up with the Playwright Test runner in our local development environment - and get us configured to do our first test run.
@@ -46,15 +44,17 @@ The process is fairly straightforward once you have Node and NPM installed. (Hin
 
 ## 2. Install Browsers
 
-By default, Playwright Test runs in headless mode (here is no visible browser graphical user interface during testing). It can be configured to [run in headed mode](https://playwright.dev/docs/ci#running-headed) using a command-line flag but you'll need to ensure that required browser binaries exist in your local environment.
+By default, Playwright Test runs in headless mode (there is no visible browser graphical user interface during testing) - but it can be configured to [run in headed mode](https://playwright.dev/docs/ci#running-headed) using a command-line flag as we'll see later.
 
-The command below installs _all_ supported browser binaries, which is useful for cross-browser testing later.
+Each version of Playwright [needs specific versions of browser binaries to operate](https://playwright.dev/docs/browsers). You can [manage the browser install](https://playwright.dev/docs/browsers#installing-browsers) process to customize which binaries are installed locally (and where), or elect to not do fresh installs and use existing browser channels instead.
+
+The command below installs _all_ supported browser binaries by default.
 
 ```js
 $ npx playwright install
 ```
 
-Each version of Playwright [needs specific versions of browser binaries to operate](https://playwright.dev/docs/browsers) - you can [manage the browser install](https://playwright.dev/docs/browsers#installing-browsers) for more granular control over the process. Browser binaries are installed by default in OS-specfic cache folders - it's useful to check those to see which binaries you currently have installed in your local device. For example, here's my macOS device listing:
+Browser binaries are installed in OS-specfic cache folders by default - it's useful to check that directory to see which binaries you currently have installed in your development environement. For example, here's my macOS device listing:
 
 ```
 $ du -hs ~/Library/Caches/ms-playwright/*
@@ -195,7 +195,9 @@ Running 3 tests using 3 workers
 
 ```
 
-You can add multiple configurations for the same browser - for instance, I added the following as a fourth project to test against desktop and mobile targets. Re-running the test should give a successful outcome with 4 tests using 4 workers.
+You can add multiple configurations for the same browser - for instance, I added the following as a fourth project to test against desktop and mobile targets. Re-running the test should give a successful outcome with 4 tests using 4 workers. 
+
+(Sidebar: Want to know supported device profiles and the default Browser type they are associated with for testing? [Check out the source!](https://github.com/microsoft/playwright/blob/bdfe92f8a7499644c431c5c05de17d71e6006084/packages/playwright-core/src/server/deviceDescriptorsSource.json))
 
 ```js
     {
@@ -259,7 +261,7 @@ We'll explore [Command line examples](https://playwright.dev/docs/test-cli) in m
 
 If you watched the [Introduction to Playwright Test runner](https://www.youtube.com/watch?v=JjhY2aFBTTk&t=1s) talk, you may recall seeing the `npm init playwright` command being used to scaffold out a complete end-to-end testing setup for a new project.
 
-This uses the [`create-playwright`](https://github.com/microsoft/create-playwright) package to support quickstarts with a single command that installs Playwright (and dependencies) and sets up  basic testing and configuration files for end-to-end testing workflows. This is a good way to also initialize _existing_ projects to use Playwright for testing.
+This uses the [`create-playwright`](https://github.com/microsoft/create-playwright) package to support quickstarts with a single command that installs Playwright (and dependencies) and sets up  basic testing and configuration files for end-to-end testing workflows. This is a good way to also initialize _existing_ projects to use Playwright for testing. Here's a quick look at how this works for intializing a new "demo" project.
 
 ```js
 $ npm init playwright demo  
@@ -288,6 +290,15 @@ Happy hacking! 🎭
 ```
 
 ---
+
+## Relevant Resources
+
+Some resources to explore at this point in your journey:
+
+ * [Browser](https://playwright.dev/docs/browsers/) installation and management.
+ * [Configuration](https://playwright.dev/docs/test-configuration) options for Playwright Test.
+ * [Command-line](https://playwright.dev/docs/test-cli) options for Playwright Test.
+ * [Device Emulation](https://playwright.dev/docs/emulation) and supported [ descriptors](https://github.com/microsoft/playwright/blob/bdfe92f8a7499644c431c5c05de17d71e6006084/packages/playwright-core/src/server/deviceDescriptorsSource.json) for configuration.
 
 ## Day 1: Review
 
