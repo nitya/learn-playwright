@@ -14,8 +14,8 @@
       
       <guid>https://nitya.github.io/learn-playwright/002-getting-started-testing/</guid>
       <description>Welcome to Day 2 of #30DaysOfPlaywright!!
- We kicked off our Playwright exploration yesterday by completing Part 1 of the Playwright Getting Started tutorial focused on setting up and validating our local development environment for testing.
-Today we&amp;rsquo;ll complete the second part of that tutorial focused on unpacking the Playwright Test scripts, learning fundamental Playwright concepts, and using them to write more complex tests. In today&amp;rsquo;s tasks, we&amp;rsquo;ll cover:</description>
+ Our Day 1 exploration of Playwright helped us setup and validate our local testing envrionment. Today we&amp;rsquo;ll complete the tutorial by reviewing fundamental Playwright concepts namely:
+ Writing assertions - to test if an expect-ed behavior holds true. Using test fixtures - to set desired page/browser context for test run. Using test hooks - to setup and tear down resources between tests.  We&amp;rsquo;ll quickly go over what each does and why we need them - and revisit each topic for a deeper dive in a future post.</description>
     </item>
     
     <item>

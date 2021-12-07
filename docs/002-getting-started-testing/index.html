@@ -11,8 +11,8 @@
   
     
     <meta name="description" content="Welcome to Day 2 of #30DaysOfPlaywright!!
- We kicked off our Playwright exploration yesterday by completing Part 1 of the Playwright Getting Started tutorial focused on setting up and validating our local development environment for testing.
-Today we’ll complete the second part of that tutorial focused on unpacking the Playwright Test scripts, learning fundamental Playwright concepts, and using them to write more complex tests. In today’s tasks, we’ll cover:">
+ Our Day 1 exploration of Playwright helped us setup and validate our local testing envrionment. Today we’ll complete the tutorial by reviewing fundamental Playwright concepts namely:
+ Writing assertions - to test if an expect-ed behavior holds true. Using test fixtures - to set desired page/browser context for test run. Using test hooks - to setup and tear down resources between tests.  We’ll quickly go over what each does and why we need them - and revisit each topic for a deeper dive in a future post.">
   
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://nitya.github.io/learn-playwright/apple-touch-icon.png">
@@ -281,6 +281,9 @@ Today we’ll complete the second part of that tutorial focused on unpacking the
       <strong>Publish date: </strong>Dec 3, 2021
       
         
+          <br>
+          <strong>Last updated: </strong>Dec 3, 2021
+        
       
     </div>
 
@@ -323,9 +326,10 @@ Today we’ll complete the second part of that tutorial focused on unpacking the
     <nav id="TableOfContents">
   <ul>
     <li><a href="#1-playwright-fundamentals">1. Playwright Fundamentals</a></li>
-    <li><a href="#2-web-assertions">2. Web Assertions.</a></li>
-    <li><a href="#3-test-fixtures">3. Test Fixtures.</a></li>
-    <li><a href="#4-test-hooks">4. Test Hooks.</a></li>
+    <li><a href="#2-unpack-the-test-script">2. Unpack the Test Script</a></li>
+    <li><a href="#3-web-assertions">3. Web Assertions.</a></li>
+    <li><a href="#4-test-fixtures">4. Test Fixtures.</a></li>
+    <li><a href="#5-test-hooks">5. Test Hooks.</a></li>
     <li><a href="#day-2-review--resources">Day 2: Review &amp; Resources</a></li>
     <li><a href="#day-3-up-next">Day 3: Up Next</a></li>
   </ul>
@@ -337,18 +341,22 @@ Today we’ll complete the second part of that tutorial focused on unpacking the
     <blockquote>
 <p>Welcome to <strong>Day 2</strong> of #30DaysOfPlaywright!!</p>
 </blockquote>
-<p>We kicked off our Playwright exploration yesterday by completing <a href="https://nitya.github.io/learn-playwright/001-getting-started-setup/">Part 1</a> of the Playwright <a href="https://playwright.dev/docs/intro">Getting Started</a> tutorial focused on setting up and validating our local development environment for testing.</p>
-<p>Today we&rsquo;ll complete the second part of that tutorial focused on unpacking the Playwright Test scripts, learning fundamental Playwright concepts, and using them to write more complex tests. In today&rsquo;s tasks, we&rsquo;ll cover:</p>
+<p>Our <a href="https://nitya.github.io/learn-playwright/001-getting-started-setup/"><code>Day 1</code> exploration of Playwright</a> helped us setup and validate our local testing envrionment. Today we&rsquo;ll complete the tutorial by reviewing fundamental Playwright concepts namely:</p>
 <ul>
 <li><a href="https://playwright.dev/docs/intro#writing-assertions">Writing assertions</a> - to test if an <em>expect</em>-ed behavior holds true.</li>
 <li><a href="https://playwright.dev/docs/intro#using-test-fixtures">Using test fixtures</a> - to set desired page/browser context for test run.</li>
 <li><a href="https://playwright.dev/docs/intro#using-test-hooks">Using test hooks</a> - to setup and tear down resources between tests.</li>
 </ul>
-<p>Each of these is deserving of a deeper-dive in future posts. For today, the goal is to understand what functionality each feature provides and get a quick sense of how to use it. Let&rsquo;s get started!</p>
+<p>We&rsquo;ll quickly go over what each does and why we need them - and revisit each topic for a deeper dive in a future post. Let&rsquo;s get started!</p>
 <hr>
 <h2 id="1-playwright-fundamentals">1. Playwright Fundamentals</h2>
-<p>In my <a href="https://nitya.github.io/learn-playwright/000-hello-30days/">kickoff post</a> I recommended the <a href="https://youtu.be/JjhY2aFBTTk">Introduction to Playwright Test runner</a> talk as a good resource to get an overview of Playwright Test fundamentals. If you haven&rsquo;t watched it already, now&rsquo;s a good time to do so before we kick off part 2. Here&rsquo;s a handy guide with direct links to each segment:</p>
-<p>Here&rsquo;s a handy linked guide to individual segments - review Ch 1-3 now.</p>
+<p>In my <a href="https://nitya.github.io/learn-playwright/000-hello-30days/">kickoff post</a> I recommended the <a href="https://youtu.be/JjhY2aFBTTk">Introduction to Playwright Test runner</a> talk as a good introduction to Playwright fundamentals. Today we&rsquo;ll reference it in the context of various sections of the Getting Started guide.</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/JjhY2aFBTTk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>Here&rsquo;s a handy list of segments with direct links to the relevant section of the talk, for convenience. I recommend you check out at least Ch 1-3 for today.</p>
 <ul>
 <li><a href="https://youtu.be/JjhY2aFBTTk?t=121">What is Playwright Test?</a></li>
 <li><a href="https://youtu.be/JjhY2aFBTTk?t=149">Why create another Test runner?</a></li>
@@ -362,7 +370,26 @@ Today we’ll complete the second part of that tutorial focused on unpacking the
 <li><a href="https://youtu.be/JjhY2aFBTTk?t=2671">Q&amp;A</a> - Languages support, comparison to other test frameworks.</li>
 </ul>
 <hr>
-<h2 id="2-web-assertions">2. Web Assertions.</h2>
+<h2 id="2-unpack-the-test-script">2. Unpack the Test Script</h2>
+<p>Let&rsquo;s revisit the code fr the <a href="https://playwright.dev/docs/intro#first-test">first test</a> we created and ran on Day 1.</p>
+<pre><code class="language-js">const { test, expect } = require('@playwright/test');
+
+test('basic test', async ({ page }) =&gt; {
+  await page.goto('https://playwright.dev/');
+  const title = page.locator('.navbar__inner .navbar__title');
+  await expect(title).toHaveText('Playwright');
+});
+</code></pre>
+<p>This simple test script illustrates some fundamental Playwright concepts that enable more reliable end-to-end testing:</p>
+<ul>
+<li><a href="https://playwright.dev/docs/actionability">Auto-waiting</a> - performs actionability checks on elements before making a requested action.</li>
+<li><a href="https://playwright.dev/docs/test-timeouts#expect-timeout">Web-First Assertions</a> - retries checks until a necessary condition is met, before proceeding.</li>
+<li><a href="https://playwright.dev/docs/test-fixtures#introduction-to-fixtures">Test Isolation with fixtures</a> - establish reliable environment for tests, enable parallelization.</li>
+<li><a href="https://playwright.dev/docs/intro#using-test-hooks">Test Hooks</a> - for just-in-time setup and teardown of resources shared between tests.</li>
+</ul>
+<p>Let&rsquo;s explore these briefly below.</p>
+<hr>
+<h2 id="3-web-assertions">3. Web Assertions.</h2>
 <p>Playwright <a href="https://jestjs.io/docs/expect">uses the expect library</a> for test assertions. Developers can test if the current state of the application matches an expected result - with helpful <em>matchers</em> to test various conditions for that state. For example:</p>
 <pre><code class="language-js">expect(value).toEqual(0);
 </code></pre>
@@ -390,7 +417,7 @@ test('my test', async ({ page }) =&gt; {
   await expect(page.locator('text=Introduction').first()).toBeVisible();
 });
 </code></pre>
-<p>I saved it to a new file (<code>assert.spec.js</code>) and ran the test successfully using</p>
+<p>Save it to a new file (<code>assert.spec.js</code>) and run it as follows:</p>
 <pre><code>$ npx playwright test assert.spec.js
 </code></pre>
 <p>The <code>{ page }</code> argument provided to the test function is an example of a <em>test fixture</em>. We&rsquo;ll talk about what fixtures are in the next section.</p>
@@ -402,7 +429,7 @@ test('my test', async ({ page }) =&gt; {
 </ul>
 <p>We&rsquo;ll explore <a href="https://playwright.dev/docs/test-assertions/">available assertions in Playwright</a> in depth in a future post.</p>
 <hr>
-<h2 id="3-test-fixtures">3. Test Fixtures.</h2>
+<h2 id="4-test-fixtures">4. Test Fixtures.</h2>
 <p>The <code>{ page }</code> argument passed into the <code>test()</code> function above is an example of a <a href="https://playwright.dev/docs/intro/#using-test-fixtures">test fixture</a>. So, what is a fixture?</p>
 <p>Inspired by <a href="https://docs.pytest.org/en/latest/explanation/fixtures.html#about-fixtures">pytest</a>, test fixtures are a tool for establishing a <em>reliable and consistent</em> test environment that provides tests exactly what they need for the current run - and nothing more. Playwright Test analyzes all the fixtures a test needs, merges required values into a single object - and makes that available to the <code>test</code> as a first parameter. The fixture is torn down after the test completes.</p>
 <p>Why fixtures? Because they create a consistent environment (test repeatability) and provide effective isolation for testing with the following benefits:</p>
@@ -421,7 +448,7 @@ test('my test', async ({ page }) =&gt; {
 <p>You can use <a href="https://playwright.dev/docs/test-fixtures/#test-fixtures">Test Fixtures</a> at the granularity of a test run, or use <a href="https://playwright.dev/docs/test-fixtures/#worker-fixtures">Worker Fixtures</a> to apply them at the level of a worker process (across all tests it oversees).</p>
 <p>The bottom line is fixtures enable consistent and isolated testing environments in Playwright Test in a flexible and customizable manner.</p>
 <hr>
-<h2 id="4-test-hooks">4. Test Hooks.</h2>
+<h2 id="5-test-hooks">5. Test Hooks.</h2>
 <p>While fixtures allow you to setup the environment for a test run, <a href="https://playwright.dev/docs/intro/#using-test-hooks">test hooks</a> provide placeholders for writing code needed to setup and teardown resources that may be shared across tests (in a group) or used on a per-test basis. Here&rsquo;s an example from the getting started guide:</p>
 <pre><code class="language-js">// example.spec.js
 const { test, expect } = require('@playwright/test');
@@ -458,14 +485,15 @@ test.describe('feature foo', () =&gt; {
 <p>This has been a lot to absorb - but never fear. In the upcoming days, we&rsquo;ll dive into these topics and APIs in more detail with simple examples. For now, you have a working Playwright environment and a grasp of key terms and concept for end-to-end testing using this framework! Onwards!</p>
 <hr>
 <h2 id="day-3-up-next">Day 3: Up Next</h2>
-<p>Before we start deep dives into topics, let&rsquo;s do one final &ldquo;big picture&rdquo; overview - and this time, we&rsquo;ll focus on tooling support! In the next post we&rsquo;ll look at Playwright tools that can help us author, analyze and debug our Playwright Test workflows. Want to get a head-start exploring resources? Check out:</p>
+<p>We now have a sense of how to create and run a simple test, and the core components that make up a test script. In the next few posts, let&rsquo;s explore some of the tools available for authoring and debugging Playwright test scripts - before we start diving into the Playwright API in more detail.</p>
+<p>Here is a short list of tooling resources that may be worth scanning for a head start.</p>
 <ul>
 <li><a href="https://playwright.dev/docs/cli">Command line tools</a> - open pages, generate code, screenshots, PDF etc.</li>
 <li><a href="https://playwright.dev/docs/inspector">Playwright Inspector</a> - GUI-based tool to author and debug scripts.</li>
 <li><a href="https://playwright.dev/docs/trace-viewer">Trace Viewer</a> - GUI-based tool to analyze Playwright Test run traces.</li>
 <li><a href="https://playwright.dev/docs/codegen">Test Generator</a> - CLI tool to record page interactions as test scripts.</li>
-<li><a href="https://playwright.dev/docs/showcase#tools">Community Showcase</a> - Tools, frameworks &amp; examples created by users.</li>
 </ul>
+<p>In addition, check out the  <a href="https://playwright.dev/docs/showcase#tools">Community Showcase</a> for tools, frameworks and examples authored by the broader community.</p>
 
   </main>
   <div id="disqus-container">
