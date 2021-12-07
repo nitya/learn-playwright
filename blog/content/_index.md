@@ -17,7 +17,9 @@ Join me!
 
 ## Recent News & Activity
 
- * Dec 02, 2021 - [Getting Started - Part 1](001-getting-started-setup/)
+ * Dec 06, 2021 - [Setup Azure Static Web Apps Demo For Experiments](https://green-stone-0ef96ef10.azurestaticapps.net/)
+ * Dec 03, 2021 - [Getting Started - Test Scripts](002-getting-started-testing/)
+ * Dec 02, 2021 - [Getting Started - Test Setup](001-getting-started-setup/)
  * Dec 01, 2021 - [Hello, #30DaysOfPlaywright!](000-hello-30days)
  * Nov 24, 2021 - [NextJS adds official example for Playwright testing](https://twitter.com/maxibanki/status/1463443111099707392)
  * Nov 18, 2021 - [Playwright v1.17 Release Candidate is out](https://twitter.com/playwrightweb/status/1461252085664522242)

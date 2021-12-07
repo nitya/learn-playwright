@@ -29,7 +29,7 @@ The list below provides a tentative schedule for topics - check back for updates
 
  * Dec 1, 2021 - [Hello, #30DaysOfPlaywright](../000-hello-30days)
  * Dec 2, 2021 - [Getting Started - Part 1](001-getting-started-setup/)
- * Dec 3, 2021 - Getting Started - Part 2
+ * Dec 3, 2021 - [Getting Started - Part 2](002-getting-started-testing/)
  * Dec 4, 2021 - Playwright Fundamentals: Web Assertions
  * Dec 5, 2021 - Playwright Fundamentals: Test Fixtures
  * Dec 6, 2021 - Playwright Fundamentals: Test Hooks
