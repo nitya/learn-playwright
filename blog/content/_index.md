@@ -17,6 +17,7 @@ Join me!
 
 ## Recent News & Activity
 
+ * Dec 07, 2021 - [Playwright ♥️ Azure Static Web Apps](003-aswa-demo-app)
  * Dec 06, 2021 - [Setup Azure Static Web Apps Demo For Experiments](https://green-stone-0ef96ef10.azurestaticapps.net/)
  * Dec 03, 2021 - [Getting Started - Test Scripts](002-getting-started-testing/)
  * Dec 02, 2021 - [Getting Started - Test Setup](001-getting-started-setup/)

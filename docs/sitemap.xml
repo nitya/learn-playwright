@@ -2,22 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://nitya.github.io/learn-playwright/003-aswa-demo-app/</loc>
+    <lastmod>2021-12-07T14:39:33-05:00</lastmod>
+  </url><url>
+    <loc>https://nitya.github.io/learn-playwright/tags/30days/</loc>
+    <lastmod>2021-12-07T14:39:33-05:00</lastmod>
+  </url><url>
+    <loc>https://nitya.github.io/learn-playwright/tags/github/</loc>
+    <lastmod>2021-12-07T14:39:33-05:00</lastmod>
+  </url><url>
+    <loc>https://nitya.github.io/learn-playwright/tags/playwright/</loc>
+    <lastmod>2021-12-07T14:39:33-05:00</lastmod>
+  </url><url>
+    <loc>https://nitya.github.io/learn-playwright/post/</loc>
+    <lastmod>2021-12-07T14:39:33-05:00</lastmod>
+  </url><url>
+    <loc>https://nitya.github.io/learn-playwright/tags/staticwebapps/</loc>
+    <lastmod>2021-12-07T14:39:33-05:00</lastmod>
+  </url><url>
+    <loc>https://nitya.github.io/learn-playwright/tags/</loc>
+    <lastmod>2021-12-07T14:39:33-05:00</lastmod>
+  </url><url>
     <loc>https://nitya.github.io/learn-playwright/002-getting-started-testing/</loc>
     <lastmod>2021-12-06T22:22:52-05:00</lastmod>
   </url><url>
-    <loc>https://nitya.github.io/learn-playwright/tags/30days/</loc>
-    <lastmod>2021-12-06T22:22:52-05:00</lastmod>
-  </url><url>
     <loc>https://nitya.github.io/learn-playwright/tags/general/</loc>
-    <lastmod>2021-12-06T22:22:52-05:00</lastmod>
-  </url><url>
-    <loc>https://nitya.github.io/learn-playwright/tags/playwright/</loc>
-    <lastmod>2021-12-06T22:22:52-05:00</lastmod>
-  </url><url>
-    <loc>https://nitya.github.io/learn-playwright/post/</loc>
-    <lastmod>2021-12-06T22:22:52-05:00</lastmod>
-  </url><url>
-    <loc>https://nitya.github.io/learn-playwright/tags/</loc>
     <lastmod>2021-12-06T22:22:52-05:00</lastmod>
   </url><url>
     <loc>https://nitya.github.io/learn-playwright/001-getting-started-setup/</loc>
@@ -27,9 +36,9 @@
     <lastmod>2021-12-01T18:50:21-05:00</lastmod>
   </url><url>
     <loc>https://nitya.github.io/learn-playwright/</loc>
-    <lastmod>2021-12-02T21:45:23-05:00</lastmod>
+    <lastmod>2021-12-06T22:25:46-05:00</lastmod>
   </url><url>
     <loc>https://nitya.github.io/learn-playwright/about/</loc>
-    <lastmod>2021-12-02T21:45:23-05:00</lastmod>
+    <lastmod>2021-12-06T22:25:46-05:00</lastmod>
   </url>
 </urlset>

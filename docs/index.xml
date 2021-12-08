@@ -8,6 +8,17 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 30 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nitya.github.io/learn-playwright/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>#003 - Playwright ♥️ Azure Static Web Apps</title>
+      <link>https://nitya.github.io/learn-playwright/003-aswa-demo-app/</link>
+      <pubDate>Tue, 07 Dec 2021 14:39:33 -0500</pubDate>
+      
+      <guid>https://nitya.github.io/learn-playwright/003-aswa-demo-app/</guid>
+      <description>Welcome to Day 3 of #30DaysOfPlaywright!!
+ Alright - so I got through the Getting Started tutorial and have the [Playwright Test] runner setup on my local environment. Where to next?
+ About Azure Static Web Apps My original goal was to explore Playwright Test tools in Playwright, and dive deeper into command-line, authoring and debugging support in more detail. But it occured to me that doing this with a somewhat realistic app as an experiment sandbox, might make more sense.</description>
+    </item>
+    
+    <item>
       <title>#002 - Getting Started (Part 2)</title>
       <link>https://nitya.github.io/learn-playwright/002-getting-started-testing/</link>
       <pubDate>Fri, 03 Dec 2021 15:46:09 -0500</pubDate>
