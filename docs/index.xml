@@ -8,6 +8,17 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 30 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nitya.github.io/learn-playwright/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>#004 - Tool Talk: Hello, Trace Viewer</title>
+      <link>https://nitya.github.io/learn-playwright/004-trace-viewer/</link>
+      <pubDate>Thu, 09 Dec 2021 14:09:45 -0500</pubDate>
+      
+      <guid>https://nitya.github.io/learn-playwright/004-trace-viewer/</guid>
+      <description>Welcome to Day 4 of #30DaysOfPlaywright!!
+ In our last post we looked at how to setup a demo app as a real-world testbed for Playwright. See the source code and visit the running site for reference.
+Today, we&amp;rsquo;ll kick off a series of &amp;ldquo;Tool Talk&amp;rdquo; blog posts that use this app as a sandbox to learn about the authoring, debugging, profiling, and command-line, tools provided by the Playwright framework.</description>
+    </item>
+    
+    <item>
       <title>#003 - Playwright ♥️ Azure Static Web Apps</title>
       <link>https://nitya.github.io/learn-playwright/003-aswa-demo-app/</link>
       <pubDate>Tue, 07 Dec 2021 14:39:33 -0500</pubDate>

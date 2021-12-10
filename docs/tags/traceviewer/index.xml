@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>traceviewer on Learn Playwright</title>
+    <link>https://nitya.github.io/learn-playwright/tags/traceviewer/</link>
+    <description>Recent content in traceviewer on Learn Playwright</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 09 Dec 2021 14:09:45 -0500</lastBuildDate><atom:link href="https://nitya.github.io/learn-playwright/tags/traceviewer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>#004 - Tool Talk: Hello, Trace Viewer</title>
+      <link>https://nitya.github.io/learn-playwright/004-trace-viewer/</link>
+      <pubDate>Thu, 09 Dec 2021 14:09:45 -0500</pubDate>
+      
+      <guid>https://nitya.github.io/learn-playwright/004-trace-viewer/</guid>
+      <description>Welcome to Day 4 of #30DaysOfPlaywright!!
+ In our last post we looked at how to setup a demo app as a real-world testbed for Playwright. See the source code and visit the running site for reference.
+Today, we&amp;rsquo;ll kick off a series of &amp;ldquo;Tool Talk&amp;rdquo; blog posts that use this app as a sandbox to learn about the authoring, debugging, profiling, and command-line, tools provided by the Playwright framework.</description>
+    </item>
+    
+  </channel>
+</rss>
