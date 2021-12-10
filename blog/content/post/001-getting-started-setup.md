@@ -6,7 +6,9 @@ toc: true
 tags: [general, playwright, 30Days]
 ---
 
-> Welcome to Day 1 of #30DaysOfPlaywright!! 
+> Welcome to **Day 1** of #30DaysOfPlaywright!! 
+
+![](https://nitya.github.io/learn-playwright/images/00-banner.png)
 
 Today's goal is to make progress on the [Getting Started](https://playwright.dev/docs/intro) tutorial which should get us set up with the Playwright Test runner in our local development environment - and get us configured to do our first test run.
 

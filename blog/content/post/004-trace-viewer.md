@@ -8,6 +8,7 @@ tags: [30Days, tooling, traceviewer, playwright ]
 
 > Welcome to **Day 4** of [#30DaysOfPlaywright](https://dev.to/nitya/series/15755)!! 
 
+![](https://nitya.github.io/learn-playwright/images/004-banner.png)
 
 In our [last post](https://nitya.github.io/learn-playwright/003-aswa-demo-app/) we looked at how to setup a demo app as a real-world testbed for Playwright. See the [source code](https://github.com/nitya/aswa-hugo-recipes4aj) and visit the [running site](https://bit.ly/recipes-for-aj) for reference.
 
@@ -161,6 +162,8 @@ Click on the trace file - and we get to our intended destination for this post! 
 
 {{<figure src="https://nitya.github.io/learn-playwright/images/003-report-trace.png" title="Screenshot of chromium project `basic test` trace view" >}}
 
+🚨 | _I've saved the trace file [here](https://nitya.github.io/learn-playwright/files/003-chromium-trace.zip) so we can explore this further next!_
+
 ---
 
 ## Trace Viewer | Launch options
@@ -171,12 +174,22 @@ Now let's talk about [Viewing options](https://playwright.dev/docs/trace-viewer/
 
  * `$npx playwright show-report` <br/> run full report, then navigate to Trace view.
  * `$npx playwright show-trace trace.zip` <br/> launch Trace viewer directly, with local file.
- * `$npx playwright show-trace https://test.com/trace.zip` <br/> launch Trace viewer directly, with remote file.
+ * `$npx playwright show-trace <remote-trace-file>` <br/> launch Trace viewer directly, with remote file.
+
+In the last case, try using [the previously-stored trace file](https://nitya.github.io/learn-playwright/files/003-chromium-trace.zip) and see what happens:
+
+```
+$ npx playwright show-trace https://nitya.github.io/learn-playwright/files/003-chromium-trace.zip
+```
+
+You should see a Trace Viewer window popup similar to the screenshot above - allowing you to view and interact with the trace data. This is a great way to analyze an archived trace, debug it collaboratively in a group project.
 
 ---
 
 ## Trace Viewer (PWA) | `trace.playwright.dev` 
-But wait - there's a fourth option: <br/> Visit [`trace.playwright.dev`](https://trace.playwright.dev/) in your browser and drop the trace file to activate the Trace Viewer. This is a great option if you are on a device that does not have Playwright installed, and you have a trace file to analyze.
+But wait - there's now a fourth option: <br/> Visit [`trace.playwright.dev`](https://trace.playwright.dev/) in your browser and drop the trace file to activate the Trace Viewer. This is a great option if you are on a device that does not have Playwright installed, and you have a trace file to analyze.
+
+_Want to try it out?_ <br/> Download the [saved trace file](https://nitya.github.io/learn-playwright/files/003-chromium-trace.zip) from before, then open [`trace.playwright.dev`](https://trace.playwright.dev/) and drag or upload this zipfile into the specified location on page.
  
 This feature was announced in recently (skip to the [11:44 mark](https://www.youtube.com/watch?v=7iyIdeoAP04&t=704s) in the video below). Most importantly, it's a [Progressive Web App](https://docs.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/) which opens the trace file locally (no sending trace data to servers) to preserve data privacy.
 

@@ -6,6 +6,9 @@ toc: true
 tags: [general, playwright, 30Days]
 ---
 
+> Welcome to #30DaysOfPlaywright!! 
+
+![](https://nitya.github.io/learn-playwright/images/000-banner.png)
 
 ## Let's Learn About Testing!
 

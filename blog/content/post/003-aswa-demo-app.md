@@ -6,8 +6,9 @@ toc: true
 tags: [30Days, staticwebapps, github, playwright ]
 ---
 
-
 > Welcome to **Day 3** of [#30DaysOfPlaywright](https://dev.to/nitya/series/15755)!! 
+
+![](https://nitya.github.io/learn-playwright/images/003-banner.png)
 
 Alright - so I got through the [Getting Started]() tutorial and have the [Playwright Test] runner setup on my local environment. Where to next?
 

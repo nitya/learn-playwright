@@ -8,6 +8,8 @@ tags: [general, playwright, 30Days]
 
 > Welcome to **Day 2** of #30DaysOfPlaywright!! 
 
+![](https://nitya.github.io/learn-playwright/images/002-banner.png)
+
 Our [`Day 1` exploration of Playwright](https://nitya.github.io/learn-playwright/001-getting-started-setup/) helped us setup and validate our local testing envrionment. Today we'll complete the tutorial by reviewing fundamental Playwright concepts namely:
 
 * [Writing assertions](https://playwright.dev/docs/intro#writing-assertions) - to test if an _expect_-ed behavior holds true.
