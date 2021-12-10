@@ -12,7 +12,12 @@ tags: [30Days, tooling, traceviewer, playwright ]
 
 In our [last post](https://nitya.github.io/learn-playwright/003-aswa-demo-app/) we looked at how to setup a demo app as a real-world testbed for Playwright. See the [source code](https://github.com/nitya/aswa-hugo-recipes4aj) and visit the [running site](https://bit.ly/recipes-for-aj) for reference.
 
-Today, we'll kick off a series of _"Tool Talk"_ blog posts that use this app as a sandbox to learn about the authoring, debugging, profiling, and command-line, tools provided by the Playwright framework. Our tool focus today:  [Trace Viewer](https://playwright.dev/docs/trace-viewer)! 
+Today, we'll kick off a series of _"Tool Talk"_ blog posts that use this app as a sandbox to learn about the authoring, debugging, profiling, and command-line, tools provided by the Playwright framework. Our tool focus today:  [Trace Viewer](https://playwright.dev/docs/trace-viewer)!
+
+Here's a handy visual guide to the Trace Viewer docs. You can download the hi-res image [here](https://nitya.github.io/learn-playwright/004-trace-viewer/) or see a time-lapse of how this was created [here](https://twitter.com/nitya/status/1469384910142164994)
+
+![Visual Summary of the TraceViewer Documentation](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/zt5g56kea37unl7mt5vz.png)
+
 
 ---
 
