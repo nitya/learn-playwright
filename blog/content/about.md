@@ -27,11 +27,11 @@ Humans learn best when we have [urgency, repetition and association](http://gret
 
 The list below provides a tentative schedule for topics - check back for updates with links to blog posts as they are published.
 
- * Day #01 - [Hello, #30DaysOfPlaywright](../000-hello-30days)
- * Day #02 - [Getting Started - Part 1](001-getting-started-setup/)
- * Day #03 - [Getting Started - Part 2](002-getting-started-testing/)
- * Day #04 - [Playwright + Azure Static Web Apps ](003-aswa-demo-app)
- * Day #05 - [Tool Talk: Trace Viewer](004-trace-viewer)
+ * Day #00 - [Hello, #30DaysOfPlaywright](../000-hello-30days)
+ * Day #01 - [Getting Started - Part 1](../001-getting-started-setup/)
+ * Day #02 - [Getting Started - Part 2](../002-getting-started-testing/)
+ * Day #03 - [Playwright + Azure Static Web Apps ](../003-aswa-demo-app)
+ * Day #04 - [Tool Talk: Trace Viewer](../004-trace-viewer)
 
 
 ---

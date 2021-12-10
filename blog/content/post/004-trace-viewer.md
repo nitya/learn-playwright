@@ -146,7 +146,7 @@ $ npx playwright show-report
 Serving HTML report at http://127.0.0.1:9323. Press Ctrl+C to quit.
 ```
 
-Check the tweet for a video walkthrough of the report (or grab the file [here](https://nitya.github.io/learn-playwright/videos/004-Show-Repo.mp4)!) <br/>
+Check the tweet for a video walkthrough of the report (or grab the file [here](https://nitya.github.io/learn-playwright/videos/004-Show-Report.mp4)!) <br/>
 {{< twitter 1469042532143321089 >}}
 
 The HTML Report landing page (shown below) has one (collapsible) section per project test run. It comes with a built-in search bar (for easy filtering and discovery) and has color-coded tags for each browser target (click on tag to scope list down to only tests run on _that_ target type).
@@ -186,7 +186,7 @@ This feature was announced in recently (skip to the [11:44 mark](https://www.you
 
 ## Trace Viewer | Layout & Components
 
-Refer to the [screenshot above](https://nitya.github.io/learn-playwright/images/003-report-trace.png) that shows the Trace Viewer page launched from the HTML report - or watch the [screencast](https://nitya.github.io/learn-playwright/videos/004-Show-Repo.mp4) for an interactive walkthrough.
+Refer to the [screenshot above](https://nitya.github.io/learn-playwright/images/003-report-trace.png) that shows the Trace Viewer page launched from the HTML report - or watch the [screencast](https://nitya.github.io/learn-playwright/videos/004-Show-Report.mp4) for an interactive walkthrough.
 
 The viewer layout has 5 main areas:
  1. Title Bar - which shows the test spec file and test name for context
