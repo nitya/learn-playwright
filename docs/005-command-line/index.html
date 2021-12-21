@@ -6,13 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.88.1" />
-  <link rel="canonical" href="/learn-playwright/004-trace-viewer/">
+  <link rel="canonical" href="/learn-playwright/005-command-line/">
 
   
     
-    <meta name="description" content="Welcome to Day 4 of #30DaysOfPlaywright!!
- In our last post we looked at how to setup a demo app as a real-world testbed for Playwright. See the source code and visit the running site for reference.
-Today, we’ll kick off a series of “Tool Talk” blog posts that use this app as a sandbox to learn about the authoring, debugging, profiling, and command-line, tools provided by the Playwright framework.">
+    <meta name="description" content="Welcome to Day 5 of #30DaysOfPlaywright!!
+ I’m back after a short break - let’s continue the #30DaysOfPlaywright journey!!
+1. 📣 #Playwright on dev.to I’ve been publishing the #30DaysofPlaywright series on the dev.to platform. And I’m excited to say that I am now also moderating the #playwright tag there. Follow it for new posts from me and the community!
+Woot! @ThePracticalDev #Playwright tag profile page just got a makeover with links and context - if you have written content about @playwrightweb do consider publishing it to https://t.">
   
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://nitya.github.io/learn-playwright/apple-touch-icon.png">
@@ -62,7 +63,7 @@ Today, we’ll kick off a series of “Tool Talk” blog posts that use this app
 
   
   
-  <title>#004 - Tool Talk: Hello, Trace Viewer | Learn Playwright</title>
+  <title>#005 - Tool Talk: Hello, Command Line | Learn Playwright</title>
 </head>
 
   <body>
@@ -272,17 +273,14 @@ Today, we’ll kick off a series of “Tool Talk” blog posts that use this app
       <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
         <use xlink:href="#bookmark"></use>
       </svg>
-      #004 - Tool Talk: Hello, Trace Viewer
+      #005 - Tool Talk: Hello, Command Line
     </h1>
 
     <div class="date">
       
       
-      <strong>Publish date: </strong>Dec 9, 2021
+      <strong>Publish date: </strong>Dec 20, 2021
       
-        
-          <br>
-          <strong>Last updated: </strong>Dec 10, 2021
         
       
     </div>
@@ -313,7 +311,7 @@ Today, we’ll kick off a series of “Tool Talk” blog posts that use this app
                 <use xlink:href="#tag"></use>
               </svg>
               
-              <a href="/learn-playwright/tags/traceviewer/">traceviewer</a>
+              <a href="/learn-playwright/tags/cli/">cli</a>
             </li>
           
             <li>
@@ -333,14 +331,15 @@ Today, we’ll kick off a series of “Tool Talk” blog posts that use this app
     <strong id="toc-heading">Table of Contents</strong>
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#recap--the-recipes4aj-app-sandbox">Recap | The Recipes4AJ App Sandbox</a></li>
-    <li><a href="#review--test-configuration">Review | Test Configuration</a></li>
-    <li><a href="#run--test-script-locally">Run | Test Script (Locally)</a></li>
-    <li><a href="#report--open-the-html-report-locally">Report | Open the HTML Report (locally)</a></li>
-    <li><a href="#trace-viewer--launch-options">Trace Viewer | Launch options</a></li>
-    <li><a href="#trace-viewer-pwa--traceplaywrightdev">Trace Viewer (PWA) | <code>trace.playwright.dev</code></a></li>
-    <li><a href="#trace-viewer--layout--components">Trace Viewer | Layout &amp; Components</a></li>
-    <li><a href="#whats-next-tool-talk-with-reporters">What&rsquo;s Next? |Tool Talk with Reporters!</a></li>
+    <li><a href="#1--playwright-on-devto">1. 📣 #Playwright on dev.to</a></li>
+    <li><a href="#2-todays-goals">2. Today&rsquo;s Goals</a></li>
+    <li><a href="#3-a-visual-cheatsheet">3. A Visual Cheatsheet</a></li>
+    <li><a href="#4-playwright-cli-usage">4. Playwright CLI: Usage</a></li>
+    <li><a href="#5-playwright-cli-basic-commands">5. Playwright CLI: Basic Commands</a></li>
+    <li><a href="#6-playwright-cli-try-examples">6. Playwright CLI: Try Examples</a></li>
+    <li><a href="#7-playwright-cli-review-options">7. Playwright CLI: Review Options</a></li>
+    <li><a href="#8-relevant-resources">8. Relevant Resources</a></li>
+    <li><a href="#8-next-steps">8. Next Steps</a></li>
   </ul>
 </nav>
   </nav>
@@ -348,194 +347,202 @@ Today, we’ll kick off a series of “Tool Talk” blog posts that use this app
 
 
     <blockquote>
-<p>Welcome to <strong>Day 4</strong> of <a href="https://dev.to/nitya/series/15755">#30DaysOfPlaywright</a>!!</p>
+<p>Welcome to <strong>Day 5</strong> of <a href="https://dev.to/nitya/series/15755">#30DaysOfPlaywright</a>!!</p>
 </blockquote>
-<p><img src="https://nitya.github.io/learn-playwright/images/004-banner.png" alt=""></p>
-<p>In our <a href="https://nitya.github.io/learn-playwright/003-aswa-demo-app/">last post</a> we looked at how to setup a demo app as a real-world testbed for Playwright. See the <a href="https://github.com/nitya/aswa-hugo-recipes4aj">source code</a> and visit the <a href="https://bit.ly/recipes-for-aj">running site</a> for reference.</p>
-<p>Today, we&rsquo;ll kick off a series of <em>&ldquo;Tool Talk&rdquo;</em> blog posts that use this app as a sandbox to learn about the authoring, debugging, profiling, and command-line, tools provided by the Playwright framework. Our tool focus today:  <a href="https://playwright.dev/docs/trace-viewer">Trace Viewer</a>!</p>
-<p>Here&rsquo;s a handy visual guide to the Trace Viewer docs. You can download the hi-res image <a href="https://cloud-skills.dev/gallery/Playwright-00-TraceViewer.png">here</a> or see a time-lapse of how this was created <a href="https://twitter.com/nitya/status/1469384910142164994">here</a></p>
-<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/zt5g56kea37unl7mt5vz.png" alt="Visual Summary of the TraceViewer Documentation"></p>
-<hr>
-<h2 id="recap--the-recipes4aj-app-sandbox">Recap | The Recipes4AJ App Sandbox</h2>
-<p>In the <a href="https://nitya.github.io/learn-playwright/003-aswa-demo-app/">last post</a> we built and deployed a recipe blog app, and configured GitHub actions to automate the build-deploy-test workflow. As part of that process, we did a couple of things that relate to this post:</p>
-<ul>
-<li><input checked="" disabled="" type="checkbox"> We <a href="https://nitya.github.io/learn-playwright/003-aswa-demo-app/#4-customizing-tests">customized</a> the Playright configuration and test script files.</li>
-<li><input checked="" disabled="" type="checkbox"> We <a href="https://nitya.github.io/learn-playwright/003-aswa-demo-app/#5-running-tests-locally">ran tests locally</a> to validate Playwright setup.</li>
-<li><input checked="" disabled="" type="checkbox"> We saw a <a href="https://nitya.github.io/learn-playwright/003-aswa-demo-app/#6-show-report-locally">show report</a> link provided when the test run completed.</li>
-</ul>
-<p>Today, we want to dive into that last part and understand what <em>&ldquo;show report&rdquo;</em> does, and dive into details on the <a href="https://playwright.dev/docs/trace-viewer">Trace Viewer</a> tool that plays a key role.</p>
-<hr>
-<h2 id="review--test-configuration">Review | Test Configuration</h2>
-<p>First, let&rsquo;s take a quick look at the project&rsquo;s <a href="https://github.com/nitya/aswa-hugo-recipes4aj/blob/main/testing/playwright.config.js">playwright.config.js</a> file to understand the default configuration settings. I&rsquo;ve deliberately omitted a lot of the details from that file and highlighted only the options relevant to today&rsquo;s post:</p>
-<pre><code class="language-js">const config = {
-  testDir: './e2e',
-
-  // See: https://playwright.dev/docs/test-reporters/
-  reporter: 'html',
-
-  // See: https://playwright.dev/docs/trace-viewer
-  use: {
-    actionTimeout: 0,
-    trace: 'on',
-  },
-
-  // See: https://playwright.dev/docs/api/class-testconfig
-  outputDir: 'test-results/',
-};
-module.exports = config;
-</code></pre>
-<p>Let&rsquo;s look at the these options in more detail:</p>
-<ol>
-<li>
-<p><a href="https://playwright.dev/docs/test-reporters/">reporter</a> is set to <code>html</code>. <br/>
-Reporters enable Playwright to create custom test reports from a test run. The <a href="https://playwright.dev/docs/test-reporters#html-reporter">HTML reporter</a> creates a folder (<code>playwright-report</code>) with report data and code that renders the data in a web page. Playwright offers other <a href="https://playwright.dev/docs/test-reporters/#built-in-reporters">built-in reporter</a> options that we&rsquo;ll explore in the next <em>Tool Talk</em> post.</p>
-</li>
-<li>
-<p><a href="https://playwright.dev/docs/api/class-testconfig#test-config-output-dir">outputDir</a> is set to <code>test-results.</code><br/> This test configuration parameter defines the location for files created during test execution. The folder is cleaned, and unique subfolders created for each (isolated) test project within the current test run.</p>
-</li>
-<li>
-<p><a href="https://playwright.dev/docs/trace-viewer#recording-a-trace">trace</a> is set to <code>on</code>. <br/> This records a trace for every test (success or failure). Other options are <code>off</code> (don&rsquo;t record), <code>on-first-retry</code> (record only for first retried test) and <code>retain-on-failure</code> (record all, then remove traces for successful runs).</p>
-</li>
-</ol>
-<p>Now let&rsquo;s look at the test script.</p>
-<hr>
-<h2 id="run--test-script-locally">Run | Test Script (Locally)</h2>
-<p>Our <a href="https://github.com/nitya/aswa-hugo-recipes4aj/blob/main/testing/e2e/example.spec.js">customized test script</a> is contained in a spec file (<code>example.spec.js</code>) and defines a single test (<code>basic test</code>) executed for three projects (targeting <code>chromium</code>, <code>firefox</code> and <code>webkit</code>) - as configured in <a href="https://github.com/nitya/aswa-hugo-recipes4aj/blob/main/testing/playwright.config.js">playwright.config.js</a>.</p>
-<pre><code class="language-js">// @ts-check
-const { test, expect } = require('@playwright/test');
-
-test('basic test', async ({ page }) =&gt; {
-  await page.goto('https://bit.ly/recipes-for-aj');
-  await expect(page).toHaveTitle(&quot;Recipes 4 AJ&quot;);
-
-  await page.locator('text=Tags').click();
-});
-</code></pre>
-<p>The test script defines three actions:</p>
-<ul>
-<li>navigate to the <a href="https://green-stone-0ef96ef10.azurestaticapps.net/">demo app</a> page</li>
-<li>check if that page has the desired title (<code>Recipes 4 AJ</code>)</li>
-<li>locate the page element matching the selector (<code>text=Tags</code>) - and click it</li>
-</ul>
-<p>Let&rsquo;s run the test script:</p>
-<pre><code class="language-js">$ cd testing
-$ npx playwright test
-Using config at &lt;..&gt;/testing/playwright.config.js
-Running 3 tests using 3 workers
-  3 passed (5s)
-
-To open last HTML report run:
-  npx playwright show-report
-</code></pre>
-<p>If you list the local directory, you&rsquo;ll now find two new folders created: <code>test-results</code> and <code>playwright-report</code>. Let&rsquo;s take a look at what these contain:</p>
-<pre><code>$ ls test-results/*
-test-results/example-basic-test-chromium:
-trace.zip
-
-test-results/example-basic-test-firefox:
-trace.zip
-
-test-results/example-basic-test-webkit:
-trace.zip
-</code></pre>
-<p>The <code>test-results</code> directory (above) contains one subfolder for each project run - with the naming convention (e.g., spec name, test name, project name) reducing conflicts for parallel test runs.</p>
-<pre><code>$ ls playwright-report/*
-playwright-report/index.html
-
-playwright-report/data:
-2cbc37ec2b02c3c5606cb8b007dfdc961a7b4a9f.zip
-77e362c78816daec1c99e9c8459f6c9ed8e1fa9f.zip
-f27c66e32b2332aa356b0e4f175b8a3321986a3e.zip
-
-playwright-report/trace:
-40e1017745522c215602.ttf	icon-384x384.png
-app.bundle.js			icon-512x512.png
-icon-16x16.png			index.html
-icon-192x192.png		sw.bundle.js
-icon-256x256.png		zip.min.js
-icon-32x32.png
-</code></pre>
-<p>The <code>playwright-report</code> directory (above) contains folders with the data per project run (zipfiles), a trace viewer app, and a landing page (<code>index.html</code>) that can be served locally for viewing reports (<code>show-report</code>).</p>
-<hr>
-<h2 id="report--open-the-html-report-locally">Report | Open the HTML Report (locally)</h2>
-<p>Let&rsquo;s view the generated report using the <a href="https://playwright.dev/docs/test-reporters#html-reporter"><code>show-report</code> command</a>.</p>
-<pre><code>$ npx playwright show-report
-
-Serving HTML report at http://127.0.0.1:9323. Press Ctrl+C to quit.
-</code></pre>
-<p>Check the tweet for a video walkthrough of the report (or grab the file <a href="https://nitya.github.io/learn-playwright/videos/004-Show-Report.mp4">here</a>!) <br/>
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Alright - this <a href="https://twitter.com/playwrightweb?ref_src=twsrc%5Etfw">@playwrightweb</a> reporting output is pretty nifty - and I love the built-in trace viewer too.  Now you know what my next blog post is all about right?<br><br>Bonus: <a href="https://t.co/DpzplITcb4">https://t.co/DpzplITcb4</a> is a PWA - use it load/view trace files anytime locally (data not sent to server) 🎭 <a href="https://t.co/p33K4dmNwv">pic.twitter.com/p33K4dmNwv</a></p>&mdash; Nitya Narasimhan (@nitya) <a href="https://twitter.com/nitya/status/1469042532143321089?ref_src=twsrc%5Etfw">December 9, 2021</a></blockquote>
+<p><img src="https://nitya.github.io/learn-playwright/images/005-banner.png" alt="Banner Image: 10 things to know about the CLI"></p>
+<p>I&rsquo;m back after a short break - let&rsquo;s continue the #30DaysOfPlaywright journey!!</p>
+<h2 id="1--playwright-on-devto">1. 📣 #Playwright on dev.to</h2>
+<p>I&rsquo;ve been publishing the <a href="https://dev.to/nitya/series/15755">#30DaysofPlaywright</a> series on the dev.to platform. And I&rsquo;m excited to say that I am now also moderating the <a href="https://dev.to/t/playwright">#playwright tag</a> there. Follow it for new posts from me and the community!</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Woot! <a href="https://twitter.com/ThePracticalDev?ref_src=twsrc%5Etfw">@ThePracticalDev</a> <a href="https://twitter.com/hashtag/Playwright?src=hash&amp;ref_src=twsrc%5Etfw">#Playwright</a> tag profile page just got a makeover with links and context - if you have written content about <a href="https://twitter.com/playwrightweb?ref_src=twsrc%5Etfw">@playwrightweb</a> do consider publishing it to <a href="https://t.co/anL2mlIIT1">https://t.co/anL2mlIIT1</a> and using that tag! <br><br>50+ posts and counting .. would love to read/amplify more! <a href="https://t.co/6OycM9Cpd1">pic.twitter.com/6OycM9Cpd1</a></p>&mdash; Nitya Narasimhan (@nitya) <a href="https://twitter.com/nitya/status/1471223653383782400?ref_src=twsrc%5Etfw">December 15, 2021</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</p>
-<p>The HTML Report landing page (shown below) has one (collapsible) section per project test run. It comes with a built-in search bar (for easy filtering and discovery) and has color-coded tags for each browser target (click on tag to scope list down to only tests run on <em>that</em> target type).</p>
-<figure><img src="https://nitya.github.io/learn-playwright/images/003-report-index.png"/><figcaption>
-            <h4>Screenshot of Landing Page for HTML Report</h4>
-        </figcaption>
-</figure>
 
-<p>Clicking on a particular test (e.g., the <code>chromium</code> record) takes you to the detailed report for that run (shown below) - listing the actions run and time taken for each, along with a link to its <em>trace.zip</em> file (since we configured Playwright to record all test runs).</p>
-<figure><img src="https://nitya.github.io/learn-playwright/images/003-report-chromium.png"/><figcaption>
-            <h4>Screenshot of chromium project `basic test` run report page</h4>
-        </figcaption>
-</figure>
-
-<p>Click on the trace file - and we get to our intended destination for this post! I&rsquo;ve linked an annotated screenshot of that page below, so we can dive a bit into what this does in the next section.</p>
-<figure><img src="https://nitya.github.io/learn-playwright/images/003-report-trace.png"/><figcaption>
-            <h4>Screenshot of chromium project `basic test` trace view</h4>
-        </figcaption>
-</figure>
-
-<p>🚨 | <em>I&rsquo;ve saved the trace file <a href="https://nitya.github.io/learn-playwright/files/003-chromium-trace.zip">here</a> so we can explore this further next!</em></p>
-<hr>
-<h2 id="trace-viewer--launch-options">Trace Viewer | Launch options</h2>
-<p><a href="https://playwright.dev/docs/trace-viewer">Trace Viewer</a> is the built-in GUI-based tool in Playwright that lets you view and analyze the recorded traces from a test run. We already talked about <a href="https://playwright.dev/docs/trace-viewer/#recording-a-trace">recording options</a> in the configuration file - and know that the trace will be stored in a <em>trace.zip</em> file under the relevant project run subfolder.</p>
-<p>Now let&rsquo;s talk about <a href="https://playwright.dev/docs/trace-viewer/#viewing-the-trace">Viewing options</a> - there are three ways to get to the Trace Viewer page to explore the trace file from a test run.</p>
+<p><em>And I have an ask for you!!</em></p>
+<p>Are you a beginner learning Playwright? Or an experienced tester with insights into how Playwright can be used with existing web frameworks or application scenarios? If so, do consider <a href="https://dev.to/new">writing a dev.to post</a> and tagging it with <code>playwright</code>! I&rsquo;m monitoring that tag and want to read / amplify your posts!</p>
+<h2 id="2-todays-goals">2. Today&rsquo;s Goals</h2>
+<p>In my <a href="https://nitya.github.io/learn-playwright/004-trace-viewer/">last post</a> I continued my learning journey by exploring <a href="https://playwright.dev/docs/trace-viewer">Trace Viewer</a> - a Playwright tool for <em>post-mortem analysis</em> of tracing-enabled test runs.</p>
+<p>Today, I want to step back and look at the full spectrum of <a href="https://playwright.dev/docs/cli">Command Line</a> tools and options available to us for authoring, debugging, and analyzing, our testing runs. Some of these capabilities can also be configured and used from <a href="https://playwright.dev/docs/api/class-playwright">the Playwright API</a> - something we&rsquo;ll explore in future posts.</p>
+<p>For today, I&rsquo;ll focus on three things:</p>
 <ul>
-<li><code>$npx playwright show-report</code> <br/> run full report, then navigate to Trace view.</li>
-<li><code>$npx playwright show-trace trace.zip</code> <br/> launch Trace viewer directly, with local file.</li>
-<li><code>$npx playwright show-trace &lt;remote-trace-file&gt;</code> <br/> launch Trace viewer directly, with remote file.</li>
+<li>CLI <em>commands</em> - what tools can we launch from command line?</li>
+<li>CLI <em>options</em> - how can we customize tool behaviors for our needs?</li>
+<li>CLI <em>examples</em> - let&rsquo;s see how these work with practical use cases</li>
 </ul>
-<p>In the last case, try using <a href="https://nitya.github.io/learn-playwright/files/003-chromium-trace.zip">the previously-stored trace file</a> and see what happens:</p>
-<pre><code>$ npx playwright show-trace https://nitya.github.io/learn-playwright/files/003-chromium-trace.zip
+<h2 id="3-a-visual-cheatsheet">3. A Visual Cheatsheet</h2>
+<p>You can browse the <a href="https://playwright.dev/docs/cli">Command Line Tools</a> documentation in depth - but if you&rsquo;re a visual-spatial learner like me, you might benefit from seeing a big picture before diving into the details. So here&rsquo;s my visual cheatsheet to the various tools and options provided by Playwright CLI.</p>
+<p>I created this from the <code>--help</code> screens for Playwright <code>v1.17.1</code>. The center yellow rectangle is the starting point for exploration, with arrows pointing to deep-dives into individual commands. Run the highlighted command (in each area) in your terminal to get updated usage notes for <em>your</em> installed Playwright version.</p>
+<p>Consider <a href="https://cloud-skills.dev/gallery/Playwright-01-CommandLine.png">downloading the hi-res image</a> and using it - as a printout or as desktop wallpaper - to give yourself a handy reference to guide our CLI exploration!</p>
+<p><img src="https://cloud-skills.dev/gallery/Playwright-01-CommandLine.png" alt="Visual Guide to Playwright Command Line"></p>
+<h2 id="4-playwright-cli-usage">4. Playwright CLI: Usage</h2>
+<p>The <a href="https://playwright.dev/docs/cli">Command Line Tools</a> documentation page has a great reference with examples, but the best way explore the CLI is interactively. Try this:</p>
+<pre><code>// Check your installed version of Playwright
+$  npx playwright -V
+Version 1.17.1
+
+// Get help on Playwright CLI commands available
+$npx playwright --help
+Usage: npx playwright [options] [command]
+...
+&lt;truncated for clarity&gt;
+
+// Get help on usage + options for specific CLI command
+// Ex: for `open` command
+$ npx playwright open --help
+Usage: npx playwright open [options] [url]
+
+open page in browser specified via -b, --browser
+Options:
+...
+&lt;truncated for clarity&gt;
 </code></pre>
-<p>You should see a Trace Viewer window popup similar to the screenshot above - allowing you to view and interact with the trace data. This is a great way to analyze an archived trace, debug it collaboratively in a group project.</p>
-<hr>
-<h2 id="trace-viewer-pwa--traceplaywrightdev">Trace Viewer (PWA) | <code>trace.playwright.dev</code></h2>
-<p>But wait - there&rsquo;s now a fourth option: <br/> Visit <a href="https://trace.playwright.dev/"><code>trace.playwright.dev</code></a> in your browser and drop the trace file to activate the Trace Viewer. This is a great option if you are on a device that does not have Playwright installed, and you have a trace file to analyze.</p>
-<p><em>Want to try it out?</em> <br/> Download the <a href="https://nitya.github.io/learn-playwright/files/003-chromium-trace.zip">saved trace file</a> from before, then open <a href="https://trace.playwright.dev/"><code>trace.playwright.dev</code></a> and drag or upload this zipfile into the specified location on page.</p>
-<p>This feature was announced in recently (skip to the <a href="https://www.youtube.com/watch?v=7iyIdeoAP04&amp;t=704s">11:44 mark</a> in the video below). Most importantly, it&rsquo;s a <a href="https://docs.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/">Progressive Web App</a> which opens the trace file locally (no sending trace data to servers) to preserve data privacy.</p>
+<p>Check out the visual cheatsheet to see the <code>--help</code> outputs for all commands to get a sense of the extent of supported options for each.</p>
+<h2 id="5-playwright-cli-basic-commands">5. Playwright CLI: Basic Commands</h2>
+<p>For convenience, here is a simplified table of the main Playwright CLI commands available now (v1.17.1) with links to relevant documentation pages.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Commands</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>install</code></td>
+<td style="text-align:left"><strong>installs browsers</strong> needed for this Playwright version</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>install-deps</code></td>
+<td style="text-align:left"><strong>installs system dependencies</strong> for supported browsers</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>open</code></td>
+<td style="text-align:left"><strong>opens the specified page in the default browser</strong> (<em>cr</em> = chromium)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>cr</code> = <code>open</code> in chromium <br/> <code>fr</code> = <code>open</code> in firefox <br/> <code>wk</code> = <code>open</code> in webkit</td>
+<td style="text-align:left"><strong>opens the specified page in the specified browser</strong> <br/> (same <code>open</code> options)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>screenshot</code></td>
+<td style="text-align:left">opens specified page, then <br/> <strong>captures page screenshot</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>pdf</code></td>
+<td style="text-align:left">opens specified page, then <br/> <strong>saves page as pdf</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>codegen</code></td>
+<td style="text-align:left">opens specified page, then <br/> <strong>launches <a href="https://playwright.dev/docs/codegen">Test Generator</a></strong>, creating test code (script) from user actions.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>test</code></td>
+<td style="text-align:left"><strong>launches <a href="https://playwright.dev/docs/test-cli">Playwright Test runner</a></strong> using default configuration file (CLI options take priority, if specified)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>show-trace</code></td>
+<td style="text-align:left"><strong>launches <a href="https://playwright.dev/docs/trace-viewer">Trace Viewer</a> (PWA)</strong> for interactive analysis of <em>trace zipfiles</em>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>show-report</code></td>
+<td style="text-align:left"><strong>launches <a href="https://playwright.dev/docs/test-reporters#html-reporter">HTML Reporter</a> webpage</strong> on local server, for test run analysis.</td>
+</tr>
+</tbody>
+</table>
+<p>The final four commands in this list are likely to find the most use - so I&rsquo;ll explore each in a separate post. Ex: check out the <a href="https://nitya.github.io/learn-playwright/004-trace-viewer/">Trace Viewer</a> post to learn about <code>show-trace</code> and it&rsquo;s usage for post-mortem analysis of test runs.</p>
+<h2 id="6-playwright-cli-try-examples">6. Playwright CLI: Try Examples</h2>
+<p>Let&rsquo;s do a quick run through of a subset of the <a href="https://playwright.dev/docs/cli#open-pages">command-line examples</a> and use these to understand the Playwright CLI options with a real world context. In the video below, I walk through the examples using <a href="https://nitya.github.io/learn-playwright/files/005-examples-script.txt">this script</a> - try it out yourself in your local environment.</p>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/7iyIdeoAP04" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+  <iframe src="https://www.youtube.com/embed/bWYWyUiQykI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-<hr>
-<h2 id="trace-viewer--layout--components">Trace Viewer | Layout &amp; Components</h2>
-<p>Refer to the <a href="https://nitya.github.io/learn-playwright/images/003-report-trace.png">screenshot above</a> that shows the Trace Viewer page launched from the HTML report - or watch the <a href="https://nitya.github.io/learn-playwright/videos/004-Show-Report.mp4">screencast</a> for an interactive walkthrough.</p>
-<p>The viewer layout has 5 main areas:</p>
-<ol>
-<li>Title Bar - which shows the test spec file and test name for context</li>
-<li>Film Strip - a timeline showing <a href="https://playwright.dev/docs/trace-viewer/#screenshots">screenshots</a> of page state as actions run</li>
-<li>Script Actions - panel listing testing actions in current test script</li>
-<li>Action Snapshots - captured <a href="https://playwright.dev/docs/trace-viewer/#snapshots">DOM snapshots</a> for each action</li>
-<li>Action Details - source location, execution + network logs for each action</li>
-</ol>
-<blockquote>
-<p>Hover over the film strip to get a magnified look at the screenshot</p>
-</blockquote>
-<p>Slide over the strip to see when different elements get rendered, to enable reliable testing. <em>For instance, this trace showed me that font-awesome icons get rendered a fraction of time later than the associated labels</em>.</p>
-<blockquote>
-<p>Selecting screenshots automatically sets context for Actions Panels below</p>
-</blockquote>
+<h2 id="7-playwright-cli-review-options">7. Playwright CLI: Review Options</h2>
+<p>For convenience, here&rsquo;s a recap of key options defined for use in the Playwright CLI. Use <code>--help</code> with a specific command (or refer to the <a href="https://cloud-skills.dev/gallery/Playwright-01-CommandLine.png">visual cheatsheet</a>), to learn which options are applicable to each command.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>--browser &lt;browserType&gt;</code></td>
+<td style="text-align:left">use a specific browser (options are cr=chromium, ff=firefox, wk=webkit) with default=cr</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--channel &lt;distribution&gt;</code></td>
+<td style="text-align:left">for chromium-based browsers - see <a href="https://playwright.dev/docs/api/class-testoptions#test-options-channel">channel options</a> for chrome, msedge</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--device &lt;name&gt;</code> <br/> <code>--user-agent &lt;ua-string&gt;</code> <br/> <code>--viewport-size &lt;size&gt;</code></td>
+<td style="text-align:left">emulate mobile browser contexts using <a href="https://playwright.dev/docs/emulation">supported parameters</a> &ndash; see <a href="https://github.com/microsoft/playwright/blob/16ae0af0fd2932efc9cc0e12e86a1b209be62da7/packages/playwright-core/src/server/deviceDescriptorsSource.json">device descriptors</a> for valid values.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--timezone &lt;time-zone&gt;</code><br/> <code>--lang &lt;lang&gt;</code><br/> <code>--geolocation &lt;lat,long&gt;</code><br/></td>
+<td style="text-align:left">emulate browser context for <a href="https://playwright.dev/docs/emulation">these parameters</a> - see <a href="https://playwright.dev/docs/emulation#locale--timezone">Locale/Timezone</a>, <a href="https://en.wikipedia.org/wiki/Language_localisation#Language_tags_and_codes">Language tags</a>, <a href="https://playwright.dev/docs/cli#emulate-geolocation-language-and-timezone">Geolocation</a> values.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--color-scheme &lt;dark,light&gt;</code></td>
+<td style="text-align:left">emulate context with <a href="https://playwright.dev/docs/emulation#color-scheme-and-media">dark or light mode</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--timeout &lt;timeout&gt;</code></td>
+<td style="text-align:left">set <a href="https://playwright.dev/docs/test-timeouts">timeout</a> for Playwright test actions to complete, in ms (default &ldquo;10000&rdquo;)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--save-storage &lt;filename&gt;</code> <br/> <code>--load-storage &lt;filename&gt;</code></td>
+<td style="text-align:left">preserve state (e.g., cookies, localStorage) for reuse across sessions e.g., <a href="https://playwright.dev/docs/cli#preserve-authenticated-state">for authentication</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--ignore-https-errors</code></td>
+<td style="text-align:left">ignore HTTPS errors on network requests</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--proxy-server &lt;proxy&gt;</code></td>
+<td style="text-align:left">specify URL of proxy server to use</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--wait-for-selector &lt;selector&gt;</code></td>
+<td style="text-align:left">(<strong>use with <code>screenshot</code> and <code>pdf</code></strong>) - wait for selector to take action</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--wait-for-timeout &lt;timeout&gt;</code></td>
+<td style="text-align:left">(<strong>use with <code>screenshot</code> and <code>pdf</code></strong>) - wait for timeout (in ms) to take action</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--full-page</code></td>
+<td style="text-align:left">(<strong>use with <code>screenshot</code></strong>) - capture full page (entire scrollable area)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--output &lt;filename&gt;</code></td>
+<td style="text-align:left">(<strong>use with <code>codegen</code></strong>) save the generated script to this filename</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>--debug</code></td>
+<td style="text-align:left">(<strong>use with <code>test</code></strong>) runs Playwright Test with Inspector for debugging</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>playwright test</code> command has a much richer <a href="https://playwright.dev/docs/test-cli#reference">set of options</a> that we will revisit in a separate post about Playwright Test runner.</p>
+<h2 id="8-relevant-resources">8. Relevant Resources</h2>
+<p>Quick summary of what we covered today:</p>
 <ul>
-<li>Script Actions panel = shows the relevant actions at time of screenshot</li>
-<li>Action Details panel = shows call logs and links to source (for test action).</li>
-<li>Snapshots panel = shows DOM state <em>before</em> &amp; <em>after</em> action (for debug).</li>
+<li>Use <code>npx playwright --help</code> to review CLI commands at any time.</li>
+<li>Review the <a href="https://playwright.dev/docs/cli">Command line tools</a> documentation.</li>
+<li>Download the <a href="https://cloud-skills.dev/gallery/Playwright-01-CommandLine.png">visual cheatsheet</a> for reviewing CLI at-a-glance.</li>
+<li>Visit the <a href="https://dev.to/t/playwright">#playwright</a> tag on dev.to - and share your learnings!</li>
+<li>Browse the <a href="https://github.com/microsoft/playwright/blob/16ae0af0fd2932efc9cc0e12e86a1b209be62da7/packages/playwright-core/src/server/deviceDescriptorsSource.json">device descriptors</a> for emulated devices supported.</li>
 </ul>
-<p>And that&rsquo;s it! Visit the <a href="https://playwright.dev/docs/trace-viewer/#recording-a-trace">Trace Viewer Documentation</a> for more updates.</p>
-<hr>
-<h2 id="whats-next-tool-talk-with-reporters">What&rsquo;s Next? |Tool Talk with Reporters!</h2>
-<p>We covered the Trace Viewer tool in today&rsquo;s <em>Tool Talk</em> post. Tomorrow, we&rsquo;ll check out Playwright&rsquo;s support for <a href="https://playwright.dev/docs/test-reporters/">Test Reporters</a> - from learning available options, to using them effectively (including in automated workflows) - and even building your own <a href="https://playwright.dev/docs/test-reporters/#custom-reporters">custom reporter</a> using the <a href="https://playwright.dev/docs/api/class-reporter">Reporter API</a>.</p>
+<h2 id="8-next-steps">8. Next Steps</h2>
+<p>We explored <a href="https://playwright.dev/docs/cli">Command Line Tools</a> at a high level, and tried out examples for a subset of CLI commands. But there are four commands that will get a lot more usage so we&rsquo;ll explore these in separate posts coming up next.</p>
+<ul>
+<li><code>show-trace</code> - explore <a href="https://playwright.dev/docs/trace-viewer">Trace Viewer</a> | previously <a href="">done</a> ✅</li>
+<li><code>show-report</code> - explore <a href="https://playwright.dev/docs/test-reporters">Test Reporters</a></li>
+<li><code>codegen</code> - explore <a href="https://playwright.dev/docs/codegen">Test Generator</a></li>
+<li><code>test</code> - explore <a href="https://playwright.dev/docs/test-cli">Playwright Test</a></li>
+<li><code>test --debug</code> - explore <a href="https://playwright.dev/docs/inspector">Playwright Inspector</a> + <a href="https://playwright.dev/docs/debug">Debugging Tools</a></li>
+</ul>
+<p>Onwards to more Tool Talk!</p>
 
   </main>
   <div id="disqus-container">

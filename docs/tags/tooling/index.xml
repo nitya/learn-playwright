@@ -6,7 +6,19 @@
     <description>Recent content in tooling on Learn Playwright</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Dec 2021 14:09:45 -0500</lastBuildDate><atom:link href="https://nitya.github.io/learn-playwright/tags/tooling/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Dec 2021 09:56:45 -0500</lastBuildDate><atom:link href="https://nitya.github.io/learn-playwright/tags/tooling/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>#005 - Tool Talk: Hello, Command Line</title>
+      <link>https://nitya.github.io/learn-playwright/005-command-line/</link>
+      <pubDate>Mon, 20 Dec 2021 09:56:45 -0500</pubDate>
+      
+      <guid>https://nitya.github.io/learn-playwright/005-command-line/</guid>
+      <description>Welcome to Day 5 of #30DaysOfPlaywright!!
+ I&amp;rsquo;m back after a short break - let&amp;rsquo;s continue the #30DaysOfPlaywright journey!!
+1. 📣 #Playwright on dev.to I&amp;rsquo;ve been publishing the #30DaysofPlaywright series on the dev.to platform. And I&amp;rsquo;m excited to say that I am now also moderating the #playwright tag there. Follow it for new posts from me and the community!
+Woot! @ThePracticalDev #Playwright tag profile page just got a makeover with links and context - if you have written content about @playwrightweb do consider publishing it to https://t.</description>
+    </item>
+    
     <item>
       <title>#004 - Tool Talk: Hello, Trace Viewer</title>
       <link>https://nitya.github.io/learn-playwright/004-trace-viewer/</link>

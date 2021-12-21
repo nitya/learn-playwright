@@ -15,6 +15,7 @@ Join me!
 
 ## Recent News & Activity
 
+ * Dec 21, 2021 - [Tool Talk : Command Line](005-command-line)
  * Dec 09, 2021 - [Tool Talk : Trace Viewer](004-trace-viewer)
  * Dec 07, 2021 - [Playwright ♥️ Azure Static Web Apps](003-aswa-demo-app)
  * Dec 06, 2021 - [Setup Azure Static Web Apps Demo For Experiments](https://green-stone-0ef96ef10.azurestaticapps.net/)

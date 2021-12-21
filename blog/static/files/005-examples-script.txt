@@ -1,0 +1,105 @@
+/********************************************
+ * PLAYWRIGHT CLI EXAMPLES: Script
+ * Try these commands out on your own terminal
+ ********************************************/
+
+
+////////////////////
+// INSTALL BROWSERS 
+////////////////////
+
+// --------- 1. Get Playwright Help
+$ npx playwright --help
+
+// --------- 2. See supported browsers
+$ npx playwright install --help
+
+// --------- 3. Install all browsers
+$ npx playwright install
+
+// --------- 4. Check installed browsers (OS-specific locations)
+// -- See: https://playwright.dev/docs/browsers#managing-browser-binaries
+// -- On Mac: list binaries installed, with disk usage stats
+$ du -hs ~/Library/Caches/ms-playwright/*
+
+// --------- 5. Install specific browser (from supported list in 2.)
+$npx playwright install msedge-dev
+
+
+////////////////////
+// INSTALL SYSTEM DEPENDENCIES 
+////////////////////
+
+// --------- 6. Install dependencies for all automatically
+$ npx playwright install-deps
+
+// --------- 7. Install dependencies for a targeted browser
+$ npx playwright install-deps msedge
+ 
+
+////////////////////
+// OPEN PAGES
+////////////////////
+
+// --------- 8. Open page in default browser (Chromium)
+$ npx playwright open https://bit.ly/recipes-for-aj
+
+// --------- 9. Open page in specified browser (Webkit)
+$ npx playwright open --browser wk https://bit.ly/recipes-for-aj
+// --------- 9. (Alternative) Open page in Webkit browser
+$ npx playwright wk https://bit.ly/recipes-for-aj
+
+// --------- 10. Emulate a mobile device (open page for mobile web)
+// -- See: Device Descriptors resource at end of article
+// -- Try: Different examples (different viewport, userAgent properties)
+$ npx playwright open --device="iPhone 11" https://bit.ly/recipes-for-aj
+$ npx playwright open --device="iPhone 11 landscape" https://bit.ly/recipes-for-aj
+$ npx playwright open --device="Pixel 5" https://bit.ly/recipes-for-aj
+
+// --------- 11. Emulate color scheme
+// -- Options: dark or light
+$  npx playwright open  --color-scheme=dark https://twitter.com
+$  npx playwright open  --color-scheme=light https://twitter.com
+
+// --------- 12. Emulate screen size (viewport)
+// See: Device Descriptors resource at end of article
+$ npx playwright open --viewport-size=800,600 https://bit.ly/recipes-for-aj
+$ npx playwright open --viewport-size=390,844 https://bit.ly/recipes-for-aj
+
+// --------- 13. Emulate language, timezone, geolocation
+$ npx playwright open --timezone="Europe/Rome" --lang="it-IT" https://docs.microsoft.com
+$ npx playwright open --timezone="Europe/Berlin" --lang="de-DE" https://docs.microsoft.com
+$ npx playwright open --timezone="Europe/Berlin" --lang="de-DE" --geolocation="48.858455,2.294474" https://maps.google.com
+
+// --------- 14. Save trace
+$ npx playwright open --device="Pixel 5" --save-trace  recipes4aj-Pixel5.zip https://bit.ly/recipes-for-aj
+
+// --------- 15. Save state / Load State
+
+////////////////////
+// CAPTURE SCREENSHOT
+////////////////////
+
+// (16) Wait 3 seconds before capturing a screenshot 
+//    after page loads ('load' event fires) and 
+//    save image to specified filename
+
+$ npx playwright screenshot --device="iPhone 11" --color-scheme=dark  --wait-for-timeout=3000  twitter.com twitter-iphone.png
+
+// (17) Same parameters, new site - compare iPhone 11 and Pixel 5 renders
+//    We can see webP does not render on mobile Safari!
+
+$ npx playwright screenshot --device="iPhone 11"  --wait-for-timeout=3000  https://bit.ly/recipes-for-aj recipes4aj-iphone11.png 
+
+$ npx playwright screenshot --device="Pixel 5"  --wait-for-timeout=3000  https://bit.ly/recipes-for-aj recipes4aj-pixel5.png
+
+
+////////////////////
+// SAVE PDF
+////////////////////
+
+// (18) Works only for headless Chromium!
+$ npx playwright pdf https://green-stone-0ef96ef10.azurestaticapps.net/iced-nannari-sherbet/ nannari-page.pdf
+$ npx playwright pdf https://green-stone-0ef96ef10.azurestaticapps.net/print/iced-nannari-sherbet/print.html nannari-printable.pdf
+
+```
