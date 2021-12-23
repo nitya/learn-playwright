@@ -6,14 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.88.1" />
-  <link rel="canonical" href="/learn-playwright/005-command-line/">
+  <link rel="canonical" href="/learn-playwright/006-codegen/">
 
   
     
-    <meta name="description" content="Welcome to Day 5 of #30DaysOfPlaywright!!
- I’m back after a short break - let’s continue the #30DaysOfPlaywright journey!!
-1. 📣 #Playwright on dev.to I’ve been publishing the #30DaysofPlaywright series on the dev.to platform. And I’m excited to say that I am now also moderating the #playwright tag there. Follow it for new posts from me and the community!
-Woot! @ThePracticalDev #Playwright tag profile page just got a makeover with links and context - if you have written content about @playwrightweb do consider publishing it to https://t.">
+    <meta name="description" content="Welcome to Day 6 of #30DaysOfPlaywright!!
+  Today’s Resources  Command Line - Playwright CLI commands and options Test Generator - Generate test scripts from user actions Recording Videos - Capture video walkthrough for post-mortem Capturing Screenshots - Capture page screenshot for post-mortem Emulating Devices - Test for mobile web, browser contexts Test Fixtures - Create isolated browser environment for test Locators - View to selector-matched elements in page Auto-Wait - Make navigation more reliable (without timeout)  Today’s Objectives In our last post we continued the series of “Tool Talk” posts by looking at the Playwright Command Line tools and options.">
   
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://nitya.github.io/learn-playwright/apple-touch-icon.png">
@@ -63,7 +61,7 @@ Woot! @ThePracticalDev #Playwright tag profile page just got a makeover with lin
 
   
   
-  <title>#005 - Tool Talk: Hello, Command Line | Learn Playwright</title>
+  <title>#006 - Tool Talk: Hello, Codegen | Learn Playwright</title>
 </head>
 
   <body>
@@ -273,17 +271,14 @@ Woot! @ThePracticalDev #Playwright tag profile page just got a makeover with lin
       <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
         <use xlink:href="#bookmark"></use>
       </svg>
-      #005 - Tool Talk: Hello, Command Line
+      #006 - Tool Talk: Hello, Codegen
     </h1>
 
     <div class="date">
       
       
-      <strong>Publish date: </strong>Dec 20, 2021
+      <strong>Publish date: </strong>Dec 22, 2021
       
-        
-          <br>
-          <strong>Last updated: </strong>Dec 21, 2021
         
       
     </div>
@@ -314,7 +309,7 @@ Woot! @ThePracticalDev #Playwright tag profile page just got a makeover with lin
                 <use xlink:href="#tag"></use>
               </svg>
               
-              <a href="/learn-playwright/tags/cli/">cli</a>
+              <a href="/learn-playwright/tags/codegen/">codegen</a>
             </li>
           
             <li>
@@ -334,15 +329,18 @@ Woot! @ThePracticalDev #Playwright tag profile page just got a makeover with lin
     <strong id="toc-heading">Table of Contents</strong>
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#1--playwright-on-devto">1. 📣 #Playwright on dev.to</a></li>
-    <li><a href="#2-todays-goals">2. Today&rsquo;s Goals</a></li>
-    <li><a href="#3-a-visual-cheatsheet">3. A Visual Cheatsheet</a></li>
-    <li><a href="#4-playwright-cli-usage">4. Playwright CLI: Usage</a></li>
-    <li><a href="#5-playwright-cli-basic-commands">5. Playwright CLI: Basic Commands</a></li>
-    <li><a href="#6-playwright-cli-try-examples">6. Playwright CLI: Try Examples</a></li>
-    <li><a href="#7-playwright-cli-review-options">7. Playwright CLI: Review Options</a></li>
-    <li><a href="#8-relevant-resources">8. Relevant Resources</a></li>
-    <li><a href="#8-next-steps">8. Next Steps</a></li>
+    <li><a href="#todays-resources">Today&rsquo;s Resources</a></li>
+    <li><a href="#todays-objectives">Today&rsquo;s Objectives</a></li>
+    <li><a href="#1-what-is-codegen">1. What is <code>codegen</code>?</a></li>
+    <li><a href="#2-why-is-codegen-useful">2. Why is <code>codegen</code> useful?</a></li>
+    <li><a href="#3-how-do-i-use-codegen">3. How do I use <code>codegen</code>?</a></li>
+    <li><a href="#4-demo-lets-codegen">4. Demo: Let&rsquo;s Codegen!</a></li>
+    <li><a href="#5-code-lets-review">5. Code: Let&rsquo;s Review!</a></li>
+    <li><a href="#6-execute-run-the-test">6: Execute: Run the Test</a></li>
+    <li><a href="#7-demo-different-languages">7: Demo: Different languages</a></li>
+    <li><a href="#8-demo-emulate-devices">8: Demo: Emulate devices</a></li>
+    <li><a href="#9-demo-customize-it">9: Demo: Customize it!</a></li>
+    <li><a href="#10-whats-next">10: What&rsquo;s Next?</a></li>
   </ul>
 </nav>
   </nav>
@@ -350,202 +348,151 @@ Woot! @ThePracticalDev #Playwright tag profile page just got a makeover with lin
 
 
     <blockquote>
-<p>Welcome to <strong>Day 5</strong> of <a href="https://dev.to/nitya/series/15755">#30DaysOfPlaywright</a>!!</p>
+<p>Welcome to <strong>Day 6</strong> of <a href="https://dev.to/nitya/series/15755">#30DaysOfPlaywright</a>!!</p>
 </blockquote>
-<p><img src="https://nitya.github.io/learn-playwright/images/005-banner.png" alt="Banner Image: 10 things to know about the CLI"></p>
-<p>I&rsquo;m back after a short break - let&rsquo;s continue the #30DaysOfPlaywright journey!!</p>
-<h2 id="1--playwright-on-devto">1. 📣 #Playwright on dev.to</h2>
-<p>I&rsquo;ve been publishing the <a href="https://dev.to/nitya/series/15755">#30DaysofPlaywright</a> series on the dev.to platform. And I&rsquo;m excited to say that I am now also moderating the <a href="https://dev.to/t/playwright">#playwright tag</a> there. Follow it for new posts from me and the community!</p>
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Woot! <a href="https://twitter.com/ThePracticalDev?ref_src=twsrc%5Etfw">@ThePracticalDev</a> <a href="https://twitter.com/hashtag/Playwright?src=hash&amp;ref_src=twsrc%5Etfw">#Playwright</a> tag profile page just got a makeover with links and context - if you have written content about <a href="https://twitter.com/playwrightweb?ref_src=twsrc%5Etfw">@playwrightweb</a> do consider publishing it to <a href="https://t.co/anL2mlIIT1">https://t.co/anL2mlIIT1</a> and using that tag! <br><br>50+ posts and counting .. would love to read/amplify more! <a href="https://t.co/6OycM9Cpd1">pic.twitter.com/6OycM9Cpd1</a></p>&mdash; Nitya Narasimhan (@nitya) <a href="https://twitter.com/nitya/status/1471223653383782400?ref_src=twsrc%5Etfw">December 15, 2021</a></blockquote>
+<p><img src="https://nitya.github.io/learn-playwright/images/006-banner.png" alt="Banner Image: 10 things to know about the CLI"></p>
+<hr>
+<h2 id="todays-resources">Today&rsquo;s Resources</h2>
+<ul>
+<li><a href="https://playwright.dev/docs/cli">Command Line</a> - Playwright CLI commands and options</li>
+<li><a href="https://playwright.dev/docs/codegen">Test Generator</a> - Generate test scripts from user actions</li>
+<li><a href="https://playwright.dev/docs/videos">Recording Videos</a> - Capture video walkthrough for post-mortem</li>
+<li><a href="https://playwright.dev/docs/screenshots">Capturing Screenshots</a> - Capture page screenshot for post-mortem</li>
+<li><a href="https://playwright.dev/docs/test-configuration#emulation">Emulating Devices</a> - Test for mobile web, browser contexts</li>
+<li><a href="https://playwright.dev/docs/intro#using-test-fixtures">Test Fixtures</a> - Create isolated browser environment for test</li>
+<li><a href="https://playwright.dev/docs/api/class-locator">Locators</a> - View to selector-matched elements in page</li>
+<li><a href="https://playwright.dev/docs/navigations#wait-for-element">Auto-Wait</a> - Make navigation more reliable (without timeout)</li>
+</ul>
+<h2 id="todays-objectives">Today&rsquo;s Objectives</h2>
+<p>In our <a href="https://nitya.github.io/learn-playwright/005-command-line/">last post</a> we continued the series of &ldquo;Tool Talk&rdquo; posts by looking at the Playwright <a href="https://playwright.dev/docs/cli">Command Line</a> tools and options.</p>
+<p>Today we&rsquo;ll do a deep-dive into one key tool you can launch from CLI: <a href="https://playwright.dev/docs/codegen"><code>codegen</code></a>, the <em>test authoring</em> tool that allows you to generate test scripts directly from user interactions on a page! We&rsquo;ll learn:</p>
+<ul>
+<li>What <code>codegen</code> does and what command-line options we can use with it.</li>
+<li>Why it is useful to experienced and beginner testers alike.</li>
+<li>How to use <code>codegen</code> to generate a test script for a user workflow.</li>
+<li>How to run the generated test script - and ways to customize its usage.</li>
+<li>Resources to explore more on your own.</li>
+</ul>
+<p>Let&rsquo;s dive in!</p>
+<hr>
+<h2 id="1-what-is-codegen">1. What is <code>codegen</code>?</h2>
+<p>Playwright&rsquo;s <a href="https://playwright.dev/docs/codegen">codegen</a> tool helps you author tests <em>out of the box</em> without you having to write the script manually. Instead, Playwright generates the test script code based on user interactions with the page.</p>
+<p>Here&rsquo;s a sneak peek at my first attempt to use this to generate a test script for my <a href="https://bit.ly/recipes-for-aj">demo app</a>. We&rsquo;ll dive into details in just a bit.</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Today&#39;s <a href="https://twitter.com/hashtag/30DaysOfPlaywright?src=hash&amp;ref_src=twsrc%5Etfw">#30DaysOfPlaywright</a> goal is to explore the <a href="https://twitter.com/hashtag/CodeGen?src=hash&amp;ref_src=twsrc%5Etfw">#CodeGen</a> capabilities of <a href="https://twitter.com/playwrightweb?ref_src=twsrc%5Etfw">@Playwrightweb</a> This is so cool I may need more than one post to capture it! <br><br>Yep just interactively walkthrough a test workflow and have test script written for you 😍<br><br>Learn more<a href="https://t.co/w3tuJv5yVW">https://t.co/w3tuJv5yVW</a> <a href="https://t.co/aXrFf15xEJ">pic.twitter.com/aXrFf15xEJ</a></p>&mdash; Nitya Narasimhan | OOO 🎉 (@nitya) <a href="https://twitter.com/nitya/status/1470444215515725836?ref_src=twsrc%5Etfw">December 13, 2021</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<p><em>And I have an ask for you!!</em></p>
-<p>Are you a beginner learning Playwright? Or an experienced tester with insights into how Playwright can be used with existing web frameworks or application scenarios? If so, do consider <a href="https://dev.to/new">writing a dev.to post</a> and tagging it with <code>playwright</code>! I&rsquo;m monitoring that tag and want to read / amplify your posts!</p>
-<h2 id="2-todays-goals">2. Today&rsquo;s Goals</h2>
-<p>In my <a href="https://nitya.github.io/learn-playwright/004-trace-viewer/">last post</a> I continued my learning journey by exploring <a href="https://playwright.dev/docs/trace-viewer">Trace Viewer</a> - a Playwright tool for <em>post-mortem analysis</em> of tracing-enabled test runs.</p>
-<p>Today, I want to step back and look at the full spectrum of <a href="https://playwright.dev/docs/cli">Command Line</a> tools and options available to us for authoring, debugging, and analyzing, our testing runs. Some of these capabilities can also be configured and used from <a href="https://playwright.dev/docs/api/class-playwright">the Playwright API</a> - something we&rsquo;ll explore in future posts.</p>
-<p>For today, I&rsquo;ll focus on three things:</p>
+<h2 id="2-why-is-codegen-useful">2. Why is <code>codegen</code> useful?</h2>
+<p>With one command, developers can <em>launch</em> a browser, <em>open</em> to a specific page, and <em>record</em> user actions with it in a way that automatically <em>generates test scripts</em> for that workflow.</p>
+<p>This provides a number of benefits:</p>
 <ul>
-<li>CLI <em>commands</em> - what tools can we launch from command line?</li>
-<li>CLI <em>options</em> - how can we customize tool behaviors for our needs?</li>
-<li>CLI <em>examples</em> - let&rsquo;s see how these work with practical use cases</li>
+<li><strong>Time Efficiency</strong>. <em>Auto-generated scripts</em> provide a solid foundation to build upon, saving time a tester would otherwise need to hand-craft tests for each action.</li>
+<li><strong>Code Efficiency</strong>. Codegen attempts to find <em>the most resilient text-based selectors</em> - those that remain reliable even with changes in implementation of tested features.</li>
+<li><strong>Customizability</strong>. Once the base script is generated, it&rsquo;s easy to adapt it to use other Playwright features like <a href="https://playwright.dev/docs/videos">recording sessions</a>, <a href="https://playwright.dev/docs/screenshots">capturing screenshots</a> or <a href="https://playwright.dev/docs/test-configuration#emulation">emulating environments</a> - for test debugging &amp; coverage.</li>
 </ul>
-<h2 id="3-a-visual-cheatsheet">3. A Visual Cheatsheet</h2>
-<p>You can browse the <a href="https://playwright.dev/docs/cli">Command Line Tools</a> documentation in depth - but if you&rsquo;re a visual-spatial learner like me, you might benefit from seeing a big picture before diving into the details. So here&rsquo;s my visual cheatsheet to the various tools and options provided by Playwright CLI.</p>
-<p>I created this from the <code>--help</code> screens for Playwright <code>v1.17.1</code>. The center yellow rectangle is the starting point for exploration, with arrows pointing to deep-dives into individual commands. Run the highlighted command (in each area) in your terminal to get updated usage notes for <em>your</em> installed Playwright version.</p>
-<p>Consider <a href="https://cloud-skills.dev/gallery/Playwright-01-CommandLine.png">downloading the hi-res image</a> and using it - as a printout or as desktop wallpaper - to give yourself a handy reference to guide our CLI exploration!</p>
-<p><img src="https://cloud-skills.dev/gallery/Playwright-01-CommandLine.png" alt="Visual Guide to Playwright Command Line"></p>
-<h2 id="4-playwright-cli-usage">4. Playwright CLI: Usage</h2>
-<p>The <a href="https://playwright.dev/docs/cli">Command Line Tools</a> documentation page has a great reference with examples, but the best way explore the CLI is interactively. Try this:</p>
-<pre><code>// Check your installed version of Playwright
-$  npx playwright -V
-Version 1.17.1
+<p>As a beginner, there&rsquo;s one added benefit - <em>learning by example</em>! Want to know how to write <em>reliable</em> tests or workflows for a given sequence of user interactions? Auto-generate the test scripts and then analyze the output to get a sense of how Playwright APIs and features can be put to use in practice.</p>
+<h2 id="3-how-do-i-use-codegen">3. How do I use <code>codegen</code>?</h2>
+<p>Let&rsquo;s look at the <code>--help</code> pages for <code>codegen</code> - review the <a href="https://nitya.github.io/learn-playwright/005-command-line/#7-playwright-cli-review-options">last post</a> to see what each option represents and how it can be used.</p>
+<script type="application/javascript" src="https://gist.github.com/nitya/44799d683e74c3e5bb14ce56c6de9311.js"></script>
 
-// Get help on Playwright CLI commands available
-$npx playwright --help
-Usage: npx playwright [options] [command]
-...
-&lt;truncated for clarity&gt;
-
-// Get help on usage + options for specific CLI command
-// Ex: for `open` command
-$ npx playwright open --help
-Usage: npx playwright open [options] [url]
-
-open page in browser specified via -b, --browser
-Options:
-...
-&lt;truncated for clarity&gt;
+<p>Based on the above, we know the <em>codegen</em> command-line tool can do the following - we&rsquo;ll try some of these out in practice next.</p>
+<ul>
+<li>save generated scripts to a file.</li>
+<li>record/save session traces (for post-mortem analysis).</li>
+<li>pick a language for script (JS, Python, C#, Test).</li>
+<li>load/store state (e.g., cookies, tokens) for reuse.</li>
+<li>specify a browser (or distribution) for test.</li>
+<li>emulate mobile browsers (with device descriptors).</li>
+<li>emulate context (geo, timezone, lang, color-scheme).</li>
+</ul>
+<h2 id="4-demo-lets-codegen">4. Demo: Let&rsquo;s Codegen!</h2>
+<p>Let&rsquo;s set the stage for this exercise! I have a <a href="https://bit.ly/recipes-for-aj">recipes app</a> and I want to test an interaction workflow where a user:</p>
+<ul>
+<li>visits the <a href="https://green-stone-0ef96ef10.azurestaticapps.net/">website</a></li>
+<li>searches for recipe: term &ldquo;appetizer&rdquo; (with 0 results).</li>
+<li>searches for recipe: term &ldquo;drinks&rdquo; (with at least 1 result).</li>
+<li>clicks on first result (&ldquo;view recipe&rdquo;)</li>
+<li>scrolls through page, clicks print icon (new page)</li>
+<li>closes printable page (returns to recipe page)</li>
+<li>clicks home</li>
+</ul>
+<p>Let&rsquo;s use <code>codegen</code> to create the test script and save to file with this command:</p>
+<pre><code>$ npx playwright codegen --output recipes-search.spec.js https://bit.ly/recipes-for-aj
 </code></pre>
-<p>Check out the visual cheatsheet to see the <code>--help</code> outputs for all commands to get a sense of the extent of supported options for each.</p>
-<h2 id="5-playwright-cli-basic-commands">5. Playwright CLI: Basic Commands</h2>
-<p>For convenience, here is a simplified table of the main Playwright CLI commands available now (v1.17.1) with links to relevant documentation pages.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">Commands</th>
-<th style="text-align:left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"><code>install</code></td>
-<td style="text-align:left"><strong>installs browsers</strong> needed for this Playwright version</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>install-deps</code></td>
-<td style="text-align:left"><strong>installs system dependencies</strong> for supported browsers</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>open</code></td>
-<td style="text-align:left"><strong>opens the specified page in the default browser</strong> (<em>cr</em> = chromium)</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>cr</code> = <code>open</code> in chromium <br/> <code>fr</code> = <code>open</code> in firefox <br/> <code>wk</code> = <code>open</code> in webkit</td>
-<td style="text-align:left"><strong>opens the specified page in the specified browser</strong> <br/> (same <code>open</code> options)</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>screenshot</code></td>
-<td style="text-align:left">opens specified page, then <br/> <strong>captures page screenshot</strong></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>pdf</code></td>
-<td style="text-align:left">opens specified page, then <br/> <strong>saves page as pdf</strong></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>codegen</code></td>
-<td style="text-align:left">opens specified page, then <br/> <strong>launches <a href="https://playwright.dev/docs/codegen">Test Generator</a></strong>, creating test code (script) from user actions.</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>test</code></td>
-<td style="text-align:left"><strong>launches <a href="https://playwright.dev/docs/test-cli">Playwright Test runner</a></strong> using default configuration file (CLI options take priority, if specified)</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>show-trace</code></td>
-<td style="text-align:left"><strong>launches <a href="https://playwright.dev/docs/trace-viewer">Trace Viewer</a> (PWA)</strong> for interactive analysis of <em>trace zipfiles</em>.</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>show-report</code></td>
-<td style="text-align:left"><strong>launches <a href="https://playwright.dev/docs/test-reporters#html-reporter">HTML Reporter</a> webpage</strong> on local server, for test run analysis.</td>
-</tr>
-</tbody>
-</table>
-<p>The final four commands in this list are likely to find the most use - so I&rsquo;ll explore each in a separate post. Ex: check out the <a href="https://nitya.github.io/learn-playwright/004-trace-viewer/">Trace Viewer</a> post to learn about <code>show-trace</code> and it&rsquo;s usage for post-mortem analysis of test runs.</p>
-<h2 id="6-playwright-cli-try-examples">6. Playwright CLI: Try Examples</h2>
-<p>Let&rsquo;s do a quick run through of a subset of the <a href="https://playwright.dev/docs/cli#open-pages">command-line examples</a> and use these to understand the Playwright CLI options with a real world context. In the video below, I walk through the examples using <a href="https://nitya.github.io/learn-playwright/files/005-examples-script.txt">this script</a> - try it out yourself in your local environment.</p>
+<p>You can see the video walkthrough below:</p>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/bWYWyUiQykI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+  <iframe src="https://www.youtube.com/embed/XX2aSSHXuJw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-<h2 id="7-playwright-cli-review-options">7. Playwright CLI: Review Options</h2>
-<p>For convenience, here&rsquo;s a recap of key options defined for use in the Playwright CLI. Use <code>--help</code> with a specific command (or refer to the <a href="https://cloud-skills.dev/gallery/Playwright-01-CommandLine.png">visual cheatsheet</a>), to learn which options are applicable to each command.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">Option</th>
-<th style="text-align:left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"><code>--browser &lt;browserType&gt;</code></td>
-<td style="text-align:left">use a specific browser (options are cr=chromium, ff=firefox, wk=webkit) with default=cr</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>--channel &lt;distribution&gt;</code></td>
-<td style="text-align:left">for chromium-based browsers - see <a href="https://playwright.dev/docs/api/class-testoptions#test-options-channel">channel options</a> for chrome, msedge</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>--device &lt;name&gt;</code> <br/> <code>--user-agent &lt;ua-string&gt;</code> <br/> <code>--viewport-size &lt;size&gt;</code></td>
-<td style="text-align:left">emulate mobile browser contexts using <a href="https://playwright.dev/docs/emulation">supported parameters</a> &ndash; see <a href="https://github.com/microsoft/playwright/blob/16ae0af0fd2932efc9cc0e12e86a1b209be62da7/packages/playwright-core/src/server/deviceDescriptorsSource.json">device descriptors</a> for valid values.</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>--timezone &lt;time-zone&gt;</code><br/> <code>--lang &lt;lang&gt;</code><br/> <code>--geolocation &lt;lat,long&gt;</code><br/></td>
-<td style="text-align:left">emulate browser context for <a href="https://playwright.dev/docs/emulation">these parameters</a> - see <a href="https://playwright.dev/docs/emulation#locale--timezone">Locale/Timezone</a>, <a href="https://en.wikipedia.org/wiki/Language_localisation#Language_tags_and_codes">Language tags</a>, <a href="https://playwright.dev/docs/cli#emulate-geolocation-language-and-timezone">Geolocation</a> values.</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>--color-scheme &lt;dark,light&gt;</code></td>
-<td style="text-align:left">emulate context with <a href="https://playwright.dev/docs/emulation#color-scheme-and-media">dark or light mode</a></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>--timeout &lt;timeout&gt;</code></td>
-<td style="text-align:left">set <a href="https://playwright.dev/docs/test-timeouts">timeout</a> for Playwright test actions to complete, in ms (default &ldquo;10000&rdquo;)</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>--save-storage &lt;filename&gt;</code> <br/> <code>--load-storage &lt;filename&gt;</code></td>
-<td style="text-align:left">preserve state (e.g., cookies, localStorage) for reuse across sessions e.g., <a href="https://playwright.dev/docs/cli#preserve-authenticated-state">for authentication</a></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>--ignore-https-errors</code></td>
-<td style="text-align:left">ignore HTTPS errors on network requests</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>--proxy-server &lt;proxy&gt;</code></td>
-<td style="text-align:left">specify URL of proxy server to use</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>--wait-for-selector &lt;selector&gt;</code></td>
-<td style="text-align:left">(<strong>use with <code>screenshot</code> and <code>pdf</code></strong>) - wait for selector to take action</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>--wait-for-timeout &lt;timeout&gt;</code></td>
-<td style="text-align:left">(<strong>use with <code>screenshot</code> and <code>pdf</code></strong>) - wait for timeout (in ms) to take action</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>--full-page</code></td>
-<td style="text-align:left">(<strong>use with <code>screenshot</code></strong>) - capture full page (entire scrollable area)</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>--output &lt;filename&gt;</code></td>
-<td style="text-align:left">(<strong>use with <code>codegen</code></strong>) save the generated script to this filename</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>--debug</code></td>
-<td style="text-align:left">(<strong>use with <code>test</code></strong>) runs Playwright Test with Inspector for debugging</td>
-</tr>
-</tbody>
-</table>
-<p>The <code>playwright test</code> command has a much richer <a href="https://playwright.dev/docs/test-cli#reference">set of options</a> that we will revisit in a separate post about Playwright Test runner.</p>
-<h2 id="8-relevant-resources">8. Relevant Resources</h2>
-<p>Quick summary of what we covered today:</p>
+<p>Below is a screenshot from that demo that highlights three things:</p>
 <ul>
-<li>Use <code>npx playwright --help</code> to review CLI commands at any time.</li>
-<li>Review the <a href="https://playwright.dev/docs/cli">Command line tools</a> documentation.</li>
-<li>Download the <a href="https://cloud-skills.dev/gallery/Playwright-01-CommandLine.png">visual cheatsheet</a> for reviewing CLI at-a-glance.</li>
-<li>Visit the <a href="https://dev.to/t/playwright">#playwright</a> tag on dev.to - and share your learnings!</li>
-<li>Browse the <a href="https://github.com/microsoft/playwright/blob/16ae0af0fd2932efc9cc0e12e86a1b209be62da7/packages/playwright-core/src/server/deviceDescriptorsSource.json">device descriptors</a> for emulated devices supported.</li>
+<li>The target website is rendered in the default chrome browser (left)</li>
+<li>The actions are recorded in a Playwright Inspector window (right)</li>
+<li>The last user action (click in search bar) is highlighted (left) - showing the <em>selector</em> used by codegen to create the corresponding test action (right)</li>
 </ul>
-<h2 id="8-next-steps">8. Next Steps</h2>
-<p>We explored <a href="https://playwright.dev/docs/cli">Command Line Tools</a> at a high level, and tried out examples for a subset of CLI commands. But there are four commands that will get a lot more usage so we&rsquo;ll explore these in separate posts coming up next.</p>
+<figure><img src="https://nitya.github.io/learn-playwright/images/006-codegen-demo.png"/><figcaption>
+            <h4>Screenshot of Playwright `codegen` demo run</h4>
+        </figcaption>
+</figure>
+
+<p>Notice that you can hover over any element on the page (under <em>codegen</em>) to see the relevant <em>selector</em> that Playwright would use, for targeting actions on it.</p>
+<h2 id="5-code-lets-review">5. Code: Let&rsquo;s Review!</h2>
+<p>Here&rsquo;s a copy of the test script generated by that walkthrough. Try running the script yourself and see if you get a different output!</p>
+<script type="application/javascript" src="https://gist.github.com/nitya/c71e6e6fb13bd67a78e8a13546c5f7bd.js"></script>
+
+<p>Here are a few concepts shown, that are worth understanding:</p>
+<ul>
+<li><strong>Test Fixtures:</strong> (Line 3) <code>{{ page }}</code> is a <a href="https://playwright.dev/docs/intro#using-test-fixtures">test fixture</a> that provides an isolated page context for this test run. If the test script is used with a configuration file defining multiple projects we can run them independently (in parallel) for efficiency, without needing browser restarts.</li>
+<li><strong>Auto-wait:</strong> (Line 6) navigating to a URL (with <code>goto</code>) will <a href="(https://playwright.dev/docs/navigations#wait-for-element)"><em>auto-wait</em></a> for the page to fire the <code>load</code> event before proceeding (removing the need to guess-timate and set timeouts) making test workflows more reliable.</li>
+<li><strong>Locators:</strong> (Line 9) <code>page.click('[placeholder=..&quot;]')</code> illustrates <a href="https://playwright.dev/docs/api/class-locator">locators</a> - representing a view to <em>selector</em>-matching elements on the page, on which operations (like <em>click</em>) can be performed. Locators are strict - operations will throw an error if more than one element matches the defined selector.</li>
+<li><strong>Handling Popups:</strong> (Line 31) shows how to <a href="https://playwright.dev/docs/pages#handling-popups">handle new page opens</a> - e.g., from <code>target=&quot;_blank&quot;</code> links. These return a new page reference that can be used to monitor events and handle actions related to that page.</li>
+</ul>
+<h2 id="6-execute-run-the-test">6: Execute: Run the Test</h2>
+<p>Now that we have a generated test script, how do we use it? Let&rsquo;s try using the generated <code>recipes-search.spec.js</code> file as follows:</p>
+<pre><code class="language-js">$ npx playwright test recipes-search.spec.js --browser=chromium
+Error: recipes-search.spec.js: JavaScript files must end with .mjs to use import.
+</code></pre>
+<p>Hmm .. that gave me a file naming error - let&rsquo;s rename the script file to use a <code>.mjs</code> extension and try this again - and let&rsquo;s throw in the <code>--debug</code> flag so we can launch the Playwright Inspector and <code>step through</code> the script interactively.</p>
+<pre><code class="language-js">$ npx playwright test recipes-search.spec.mjs --browser=chromium --debug     
+
+Running 1 test using 1 worker
+
+     [chromium] › recipes-search.spec.mjs:3:1 › test
+</code></pre>
+<p><strong>SUCCESS!!</strong> You should notice that the script execution steps through the same sequence of user actions you had previously done, to generate that script. Now, you can automate this test with different options (e.g., browser types, device types, browser parameters etc.)</p>
+<h2 id="7-demo-different-languages">7: Demo: Different languages</h2>
+<p>Let&rsquo;s try adapting the <code>codegen</code> command to create the test script in a different language (<code>python</code>). Try running this command yourself - see how the output differs from the one before. Here&rsquo;s a peek at my <a href="https://gist.github.com/nitya/3885645ac80242775a924f3a20436136">generated Python test script</a> for this demo if useful.</p>
+<pre><code>$ npx playwright codegen --output recipes-search.spec.py --target=python https://bit.ly/recipes-for-aj
+</code></pre>
+<h2 id="8-demo-emulate-devices">8: Demo: Emulate devices</h2>
+<p>What happens if the user is visiting my site from a mobile browser? How does this alter the test script generation?. Let&rsquo;s use <code>codegen</code> with an emulated device (&ldquo;Pixel 5&rdquo;) targeting a mobile Chrome browser - and compare outputs. Try this command out yourself:</p>
+<pre><code>$npx playwright codegen --output recipes-search.spec.mjs --device &quot;Pixel 5&quot;  https://bit.ly/recipes-for-aj
+</code></pre>
+<p>Here&rsquo;s a screenshot of what that looks like - note that the user experience is already different, requiring an additional click to open the menu that displays the search bar, before it can be populated with the desired search term.</p>
+<figure><img src="https://nitya.github.io/learn-playwright/images/006-codegen-pixel5.png"/><figcaption>
+            <h4>Screenshot of Playwright `codegen` demo using Pixel 5 emulated device</h4>
+        </figcaption>
+</figure>
+
+<h2 id="9-demo-customize-it">9: Demo: Customize it!</h2>
+<p>Once you have the basic script created, you have two ways to build on that script for a richer testing experience:</p>
+<ul>
+<li>
+<p><strong>Functionality</strong> | Edit the generated test file to add/modify tests - it helps to know the <a href="https://playwright.dev/docs/api/class-playwright">Playwright API</a> and features.</p>
+</li>
+<li>
+<p><strong>Consistency</strong> | Use <a href="https://playwright.dev/docs/test-configuration">Configuration files</a> to create multiple projects (diverse targets, fixtures) and test in parallel.</p>
+</li>
+</ul>
+<h2 id="10-whats-next">10: What&rsquo;s Next?</h2>
+<p>In the previous post, we identified these key CLI commands for deep dives - we&rsquo;ve completed two of them so far, so let&rsquo;s keep going with the <em>Tool Talk</em> series and explore one more: Test Reporters! Until the next time! (<em>exit, stage left</em>)</p>
 <ul>
 <li><code>show-trace</code> - explore <a href="https://playwright.dev/docs/trace-viewer">Trace Viewer</a> | previously <a href="https://nitya.github.io/learn-playwright/004-trace-viewer/">done</a> ✅</li>
+<li><code>codegen</code> - explore <a href="https://playwright.dev/docs/codegen">Test Generator</a> | done today ✅</li>
 <li><code>show-report</code> - explore <a href="https://playwright.dev/docs/test-reporters">Test Reporters</a></li>
-<li><code>codegen</code> - explore <a href="https://playwright.dev/docs/codegen">Test Generator</a></li>
 <li><code>test</code> - explore <a href="https://playwright.dev/docs/test-cli">Playwright Test</a></li>
 <li><code>test --debug</code> - explore <a href="https://playwright.dev/docs/inspector">Playwright Inspector</a> + <a href="https://playwright.dev/docs/debug">Debugging Tools</a></li>
 </ul>
-<p>Onwards to more Tool Talk!</p>
 
   </main>
   <div id="disqus-container">

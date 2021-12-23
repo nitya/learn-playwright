@@ -6,13 +6,40 @@
     <description>Recent content in Tags on Learn Playwright</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Dec 2021 09:56:45 -0500</lastBuildDate><atom:link href="https://nitya.github.io/learn-playwright/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Dec 2021 17:48:15 -0500</lastBuildDate><atom:link href="https://nitya.github.io/learn-playwright/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>30Days</title>
       <link>https://nitya.github.io/learn-playwright/tags/30days/</link>
-      <pubDate>Mon, 20 Dec 2021 09:56:45 -0500</pubDate>
+      <pubDate>Wed, 22 Dec 2021 17:48:15 -0500</pubDate>
       
       <guid>https://nitya.github.io/learn-playwright/tags/30days/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>codegen</title>
+      <link>https://nitya.github.io/learn-playwright/tags/codegen/</link>
+      <pubDate>Wed, 22 Dec 2021 17:48:15 -0500</pubDate>
+      
+      <guid>https://nitya.github.io/learn-playwright/tags/codegen/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>playwright</title>
+      <link>https://nitya.github.io/learn-playwright/tags/playwright/</link>
+      <pubDate>Wed, 22 Dec 2021 17:48:15 -0500</pubDate>
+      
+      <guid>https://nitya.github.io/learn-playwright/tags/playwright/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tooling</title>
+      <link>https://nitya.github.io/learn-playwright/tags/tooling/</link>
+      <pubDate>Wed, 22 Dec 2021 17:48:15 -0500</pubDate>
+      
+      <guid>https://nitya.github.io/learn-playwright/tags/tooling/</guid>
       <description></description>
     </item>
     
@@ -22,24 +49,6 @@
       <pubDate>Mon, 20 Dec 2021 09:56:45 -0500</pubDate>
       
       <guid>https://nitya.github.io/learn-playwright/tags/cli/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>playwright</title>
-      <link>https://nitya.github.io/learn-playwright/tags/playwright/</link>
-      <pubDate>Mon, 20 Dec 2021 09:56:45 -0500</pubDate>
-      
-      <guid>https://nitya.github.io/learn-playwright/tags/playwright/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tooling</title>
-      <link>https://nitya.github.io/learn-playwright/tags/tooling/</link>
-      <pubDate>Mon, 20 Dec 2021 09:56:45 -0500</pubDate>
-      
-      <guid>https://nitya.github.io/learn-playwright/tags/tooling/</guid>
       <description></description>
     </item>
     

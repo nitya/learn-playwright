@@ -135,7 +135,7 @@ Quick summary of what we covered today:
 
 We explored [Command Line Tools](https://playwright.dev/docs/cli) at a high level, and tried out examples for a subset of CLI commands. But there are four commands that will get a lot more usage so we'll explore these in separate posts coming up next.
 
- * `show-trace` - explore [Trace Viewer](https://playwright.dev/docs/trace-viewer) | previously [done]() ✅
+ * `show-trace` - explore [Trace Viewer](https://playwright.dev/docs/trace-viewer) | previously [done](https://nitya.github.io/learn-playwright/004-trace-viewer/) ✅
  * `show-report` - explore [Test Reporters](https://playwright.dev/docs/test-reporters) 
  * `codegen` - explore [Test Generator](https://playwright.dev/docs/codegen) 
  * `test` - explore [Playwright Test](https://playwright.dev/docs/test-cli) 

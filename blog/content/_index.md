@@ -15,6 +15,7 @@ Join me!
 
 ## Recent News & Activity
 
+ * Dec 22, 2021 - [Tool Talk : Codegen](006-codegen)
  * Dec 21, 2021 - [Tool Talk : Command Line](005-command-line)
  * Dec 09, 2021 - [Tool Talk : Trace Viewer](004-trace-viewer)
  * Dec 07, 2021 - [Playwright ♥️ Azure Static Web Apps](003-aswa-demo-app)

@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Learn Playwright</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Dec 2021 09:56:45 -0500</lastBuildDate><atom:link href="https://nitya.github.io/learn-playwright/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Dec 2021 17:48:15 -0500</lastBuildDate><atom:link href="https://nitya.github.io/learn-playwright/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>#006 - Tool Talk: Hello, Codegen</title>
+      <link>https://nitya.github.io/learn-playwright/006-codegen/</link>
+      <pubDate>Wed, 22 Dec 2021 17:48:15 -0500</pubDate>
+      
+      <guid>https://nitya.github.io/learn-playwright/006-codegen/</guid>
+      <description>Welcome to Day 6 of #30DaysOfPlaywright!!
+  Today&amp;rsquo;s Resources  Command Line - Playwright CLI commands and options Test Generator - Generate test scripts from user actions Recording Videos - Capture video walkthrough for post-mortem Capturing Screenshots - Capture page screenshot for post-mortem Emulating Devices - Test for mobile web, browser contexts Test Fixtures - Create isolated browser environment for test Locators - View to selector-matched elements in page Auto-Wait - Make navigation more reliable (without timeout)  Today&amp;rsquo;s Objectives In our last post we continued the series of &amp;ldquo;Tool Talk&amp;rdquo; posts by looking at the Playwright Command Line tools and options.</description>
+    </item>
+    
     <item>
       <title>#005 - Tool Talk: Hello, Command Line</title>
       <link>https://nitya.github.io/learn-playwright/005-command-line/</link>

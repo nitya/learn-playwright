@@ -33,6 +33,7 @@ The list below provides a tentative schedule for topics - check back for updates
  * Day #03 - [Playwright + Azure Static Web Apps ](../003-aswa-demo-app)
  * Day #04 - [Tool Talk: Trace Viewer](../004-trace-viewer)
  * Day #05 - [Tool Talk: Command Line](../005-command-line)
+ * Day #06 - [Tool Talk: Codegen](../005-codegen)
 
 
 ---
